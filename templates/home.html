@@ -1,0 +1,80 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Load CSS -->
+<link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
+
+<div class="container" id="welcomeMsg">
+    <h4>Welcome to Fredducation!</h4>
+    <h6>
+        Here I share the people, places, and media that I've come to know through learning spanish.
+    </h6>
+    <p>
+        Read more about Fredducation <a href="/about/">here.</a> 
+    </p>
+</div>
+
+
+<div class="container-lg">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-8">
+            <h3>Recent Posts</h3>
+            <hr>
+            <!-- Carousel wrapper -->
+            <div id="homeCarousel" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
+                
+                <!-- Inner -->
+                <div class="carousel-inner">
+                    {%for obj in qs%}
+                        {%if forloop.counter0 == 0%}
+                            <!-- Active item -->
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <a href="{{obj.getAbsoluteUrl}}" style="text-decoration: none;">
+                                    <img src="{{obj.thumbnail.url}}" class="" alt=""/>
+                                    <div class="carousel-caption">
+                                    <h3>{{obj.title}}</h3>
+                                    {%if obj.postType != 'media'%}
+                                        <p>{{obj.city}}, {{obj.country}}</p>
+                                    {%endif%}
+                                    </div>
+                                </a>
+                            </div>
+
+                        {%else%}
+                            <!-- Item -->
+                            <div class="carousel-item" data-bs-interval="10000">
+                                <a href="{{obj.getAbsoluteUrl}}" style="text-decoration: none;">
+                                    <img src="{{obj.thumbnail.url}}" class="" alt=""/>
+                                    <div class="carousel-caption">
+                                    <h3>{{obj.title}}</h3>
+                                    {%if obj.postType != 'media'%}
+                                        <p>{{obj.city}}, {{obj.country}}</p>
+                                    {%endif%}
+                                    </div>
+                                </a>
+                            </div>
+                        {%endif%}
+                    {%endfor%}      
+                </div>
+                <!-- Inner -->
+            
+                <!-- Left, right arrows for carousel control -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+            <!-- Carousel wrapper -->
+        </div>
+    </div>
+</div>
+
+{%endblock content%}
+

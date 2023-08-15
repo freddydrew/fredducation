@@ -1,0 +1,6 @@
+bin/
+lib/
+lib64/
+static/articles/
+staticfiles/
+.env

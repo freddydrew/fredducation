@@ -1,0 +1,38 @@
+.container {
+    margin-top: 2%;
+}
+
+.container-lg{
+    margin-top: 2%;
+}
+
+.carousel-inner img{
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.one-image img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* Article Title Formatting */
+.articleTitle {
+    text-align: center;
+}
+
+/* Article Content Formatting */
+a{
+    text-decoration: none;
+}
+
+p{
+    text-indent: 40px;
+}
+
+span {
+    font-size: small;    
+}

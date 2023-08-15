@@ -1,0 +1,20 @@
+.navbar{
+    border-bottom: 2px solid royalblue;
+}
+
+/* Footer Styles */
+.footer{
+    border-top: 2px solid royalblue;
+    margin-top: 5%;
+}
+
+.footer-links {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    list-style-type: none;
+    margin-top: 2%;
+}
+
+.footer-links a {
+    text-decoration: none;
+}

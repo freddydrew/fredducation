@@ -1,0 +1,101 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!-- Load Static -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesArticle.css' %}">
+
+<!-- For when there is only one image, just display it -->
+{%if obj.articleimage_set.count == 1%}
+
+<div class="container-lg one-image">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-8">
+            <!-- Load image, must be URL, Not sure why -->
+            <img src="{{obj.articleimage_set.all.0.image.url}}" 
+            alt="{{obj.title}} image" class="">
+        </div>
+    </div>
+</div>
+{%endif%}
+
+<!-- More than one image is a carousel -->
+{%if obj.articleimage_set.count > 1%}
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-8">
+                <div id="carouselDark" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {%for image in obj.articleimage_set.all%}
+                            {%if forloop.counter0 == 0%}
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="{{image.image.url}}" class="img-fluid" alt="...">
+                                </div>
+                            {%else%}
+                                <div class="carousel-item" data-bs-interval="10000">
+                                    <img src="{{image.image.url}}" class="img-fluid" alt="...">
+                                </div>
+                            {%endif%}
+                        {%endfor%}
+                    </div>
+
+                    <!-- Left, right arrows for carousel control -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endif%}
+
+
+<!-- Displaying content title and location -->
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-8">
+            <!-- Display Title -->
+            <h3 class="articleTitle">{{obj.title}}</h3>
+
+            <!-- If person or place, display that info -->
+            {%if obj.postType != 'media'%}
+                <h4 class="articleTitle">
+                    {{obj.city}}, {{obj.country}}
+                </h4>
+            {%endif%}
+
+            <!-- Article Content, writeup -->
+            <hr>
+            {%if obj.content != None%}
+            <!-- Keeps spacing from object -->
+                <p>
+                    {{obj.content|linebreaks}}
+                </p>
+            {%endif%}
+
+            {%if obj.contentEsp != None%}
+            <!-- Keeps spacing from object -->
+                <h6>
+                    Lo que sigue es una traducción de arriba. 
+                    Hágamelo saber si hay errores <a href="/contact/">aquí.</a>
+                </h6>
+                <p>
+                    {{obj.contentEsp|linebreaks}}
+                </p>
+            {%endif%}
+
+            <span>
+                Published on {{obj.publishDate}}
+            </span>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}
+

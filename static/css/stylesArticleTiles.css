@@ -1,0 +1,33 @@
+.container{
+    margin-top: 2%;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.card{
+    transition: all 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.05);
+}
+
+.card-title{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.card-subtitle{
+    text-align: center;
+}
+
+span {
+    margin-top: 5%;
+    font-size: small;
+    text-align: left;
+    color: darkgray;
+    text-indent: 2%;
+}

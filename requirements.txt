@@ -1,0 +1,13 @@
+# All things I have installed in my python3 virtual environment
+# Not all things are in order but I try my best.
+# At time of writing, all installed using pip install [THING]
+
+# Django Packages
+django #https://docs.djangoproject.com/en/4.2/topics/install/
+django-dotenv #https://pypi.org/project/django-dotenv/
+django-bootstrap-v5 #https://pypi.org/project/django-bootstrap-v5/
+
+# Regular Python
+Unidecode #https://pypi.org/project/Unidecode/
+Pillow #https://pypi.org/project/Pillow/
+pycountry #https://pypi.org/project/pycountry/

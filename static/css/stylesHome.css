@@ -1,0 +1,30 @@
+.container{
+    margin-top: 2%;
+}
+
+.container-lg{
+    margin-top: 2%;
+}
+
+img{
+    border-radius: 20px;
+    width: 80%;
+    margin: 0% 10%;
+}
+
+#welcomeMsg {
+    text-align: center;
+}
+
+#welcomeMsg a {
+    text-decoration: none;
+}
+
+.carousel-caption { 
+    margin-top: 2%;
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+

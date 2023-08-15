@@ -1,0 +1,40 @@
+<!-- Load Static -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesArticleTiles.css' %}">
+
+
+    <!-- The row that will contain the cards -->
+<div class="container">
+    <div class="row aligns-content-center justify-content-center">
+        {%for obj in object_list%}
+            <div class="col-4">
+                <a href="{{obj.getAbsoluteUrl}}">
+                    <div class="card border-dark my-2 text-dark">
+                        <img class="card-img-top" 
+                        src="{{obj.thumbnail.url}}" 
+                        alt="{{obj.title}} thumbnail">
+                        <h4 class="card-title">
+                            {{obj.title}}
+                        </h4>
+                        {%if obj.postType != 'media'%}
+                            <p class="card-subtitle">
+                                {{obj.city}},
+                            </p>
+                            <p class="card-subtitle">
+                                {{obj.country}}
+                            </p>
+                        {%endif%}
+                        <span>
+                            Published on {{obj.publishDate}}
+                        </span>
+                    </div>
+                </a>
+            </div>
+        {%endfor%}
+    </div>
+</div>
+
+    
+
+

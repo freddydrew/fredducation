@@ -1,0 +1,78 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!-- Load static files -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesAbout.css' %}">
+
+
+<!-- What is Freducation? -->
+<section class="about-freducation">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <h3>About Freducation</h3>
+                <hr>
+                <p>
+                    The goal of Freducation is to encourage language learners to interact with their target 
+                    language in the real world. I aim to accomplish this by sharing my experiences as I learn Spanish, 
+                    specifically with the people, places, and media that I have learned so much from.
+
+                    I felt that the language learning community that I interacted with was overly concerned 
+                    with things like counting the hours of listening comprehension exercises until a mile stone was 
+                    reached, debating the usefulness of different learning apps, or how to attain a certain accent 
+                    in a target language. I thought to myself “isn’t the point of it all to enjoy the language?”. 
+                    So I made a space to show how I enjoy interacting with my target language, Spanish. 
+                    Hopefully this pulls people away from what’s not important in their own language learning journey.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about-me">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <h3>About Me</h3>
+                <hr>
+                <p>
+                    I’m Freddy Drew, creator of Freducation. Recently I decided to stop putting it off and learn Spanish. 
+                    I thought it'd be nice to share how its going. I hope you like it. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5">
+                <img src="{% static 'images/aboutMe.jpg' %}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="why-freducation">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <h3>Why is it called Freducation?</h3>
+                <hr>
+                <p>
+                    It’s not just a play on my name. It’s also a recognition that all of the posts 
+                    on this site are about the many teachers in my language education. I do not 
+                    consider myself an autodidact. I wish I could give credit to everyone and everythong 
+                    that has helped me.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{%endblock content%}

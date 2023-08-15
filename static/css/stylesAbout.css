@@ -1,0 +1,12 @@
+.container{
+    margin-top: 2%;
+}
+
+.container p{
+    text-indent: 40px;
+}
+
+.container img{
+    filter: drop-shadow(10px 10px 10px #ccc);
+    border-radius: 10px;
+}
