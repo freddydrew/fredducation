@@ -11,3 +11,7 @@ django-bootstrap-v5 #https://pypi.org/project/django-bootstrap-v5/
 Unidecode #https://pypi.org/project/Unidecode/
 Pillow #https://pypi.org/project/Pillow/
 pycountry #https://pypi.org/project/pycountry/
+
+# For app platfrom digital ocean
+gunicorn #production grade webserver
+psycopg2-binary #PostgreSQL database adapter
