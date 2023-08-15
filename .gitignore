@@ -4,3 +4,4 @@ lib64/
 static/articles/
 staticfiles/
 .env
+db.sqlite3
