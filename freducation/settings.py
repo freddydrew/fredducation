@@ -178,4 +178,4 @@ EMAIL_PORT = 587 # port google uses for it's smtp
 EMAIL_USE_TLS = True # TLS is a protocol that encrypts and delivers mail securely, for both inbound and outbound mail traffic
 EMAIL_USE_SSL = False # Before TLS there was SSL
 
-django_on_heroku.settings(locals())
+django_on_heroku.settings(locals(), staticfiles=False)
