@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url # added for heroku
+import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -176,3 +177,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587 # port google uses for it's smtp
 EMAIL_USE_TLS = True # TLS is a protocol that encrypts and delivers mail securely, for both inbound and outbound mail traffic
 EMAIL_USE_SSL = False # Before TLS there was SSL
+
+django_on_heroku.settings(locals())
