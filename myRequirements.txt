@@ -6,6 +6,7 @@
 django #https://docs.djangoproject.com/en/4.2/topics/install/
 django-dotenv #https://pypi.org/project/django-dotenv/
 django-bootstrap-v5 #https://pypi.org/project/django-bootstrap-v5/
+django-heroku #https://pypi.org/project/django-heroku/
 
 # Regular Python
 Unidecode #https://pypi.org/project/Unidecode/
