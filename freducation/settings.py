@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 ]
 
 ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED')
-if ADMIN_ENABLED:
+if ADMIN_ENABLED is True:
     INSTALLED_APPS.append('django.contrib.admin')
 
 MIDDLEWARE = [
