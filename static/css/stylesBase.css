@@ -2,7 +2,16 @@
     border-bottom: 2px solid royalblue;
 }
 
+body{
+    justify-self: flex-start;
+    flex-grow: 3;
+}
+
 /* Footer Styles */
+footer{
+    justify-self: self-end;
+}
+
 .footer{
     border-top: 2px solid royalblue;
     margin-top: 5%;

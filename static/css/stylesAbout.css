@@ -7,6 +7,7 @@
 }
 
 .container img{
-    filter: drop-shadow(10px 10px 10px #ccc);
+    filter: drop-shadow(5px 5px 5px #ccc);
     border-radius: 10px;
+    margin-bottom: 2%;
 }

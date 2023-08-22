@@ -11,7 +11,7 @@
 
 <div class="container-lg one-image">
     <div class="row justify-content-center align-items-center">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <!-- Load image, must be URL, Not sure why -->
             <img src="{{obj.articleimage_set.all.0.image.url}}" 
             alt="{{obj.title}} image" class="">
@@ -24,7 +24,7 @@
 {%if obj.articleimage_set.count > 1%}
     <div class="container-lg">
         <div class="row justify-content-center align-items-center text-center">
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
                 <div id="carouselDark" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         {%for image in obj.articleimage_set.all%}
@@ -59,7 +59,7 @@
 <!-- Displaying content title and location -->
 <div class="container">
     <div class="row justify-content-center align-items-center">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <!-- Display Title -->
             <h3 class="articleTitle">{{obj.title}}</h3>
 
@@ -83,7 +83,8 @@
             <!-- Keeps spacing from object -->
                 <h6>
                     Lo que sigue es una traducción de arriba. 
-                    Hágamelo saber si hay errores <a href="/contact/">aquí.</a>
+                    Hágamelo saber si hay errores con mi correo electronico 
+                    <a href="/about/#contact-info">aquí.</a>
                 </h6>
                 <p>
                     {{obj.contentEsp|linebreaks}}

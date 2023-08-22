@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url # added for heroku
-import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,13 +26,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DEBUG')) == "1"
 
-ALLOWED_HOSTS = [os.environ.get('DJANGO_ALLOWED_HOSTS')]
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS += os.environ.get('DJANGO_ALLOWED_HOSTS')
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -44,6 +42,10 @@ INSTALLED_APPS = [
     'articles',
     'storages',
 ]
+
+ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED')
+if ADMIN_ENABLED:
+    INSTALLED_APPS.append('django.contrib.admin')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,21 +83,6 @@ WSGI_APPLICATION = 'freducation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# added for heroku
-# if IS_HEROKU_APP:
-#     # In production on Heroku the database configuration is derived from the `DATABASE_URL`
-#     # environment variable by the dj-database-url package. `DATABASE_URL` will be set
-#     # automatically by Heroku when a database addon is attached to your Heroku app. See:
-#     # https://devcenter.heroku.com/articles/provisioning-heroku-postgres
-#     # https://github.com/jazzband/dj-database-url
-#     DATABASES = {
-#         "default": dj_database_url.config(
-#             conn_max_age=600,
-#             conn_health_checks=True,
-#             ssl_require=True,
-#         ),
-#     }
-# else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -154,8 +141,9 @@ EMAIL_USE_TLS = True # TLS is a protocol that encrypts and delivers mail securel
 EMAIL_USE_SSL = False # Before TLS there was SSL
 
 # django_on_heroku.settings(locals(), staticfiles=False)
-s3 = True
-if s3:
+S3 = os.environ.get('S3')
+
+if S3:
     # For AWS S3
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
