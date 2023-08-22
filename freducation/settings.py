@@ -33,6 +33,7 @@ ALLOWED_HOSTS += os.environ.get('DJANGO_ALLOWED_HOSTS')
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -42,10 +43,6 @@ INSTALLED_APPS = [
     'articles',
     'storages',
 ]
-
-ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED')
-if ADMIN_ENABLED is True:
-    INSTALLED_APPS.append('django.contrib.admin')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
