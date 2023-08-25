@@ -6,3 +6,5 @@ staticfiles/
 db.sqlite3
 aws/
 awscliv2.zip
+notes.md
+.vscode/

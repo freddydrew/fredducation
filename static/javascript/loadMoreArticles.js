@@ -6,7 +6,7 @@ async function loadMore(){
         return res;
     })
 
-    out = `<div class="col-4">
+    out = `
             <a href="${response.data[0].slug}">
                 <div class="card border-dark my-2 text-dark">
                     <img class="card-img-top" 
@@ -28,9 +28,11 @@ async function loadMore(){
                     </span>
                 </div>
             </a>
-        </div>`
+        `
 
     var div = document.createElement("div");
+    div.classList.add('col-6')
+    div.classList.add('col-lg-3')
     div.innerHTML = out
     document.getElementsByClassName('row')[0].appendChild(div);
 }

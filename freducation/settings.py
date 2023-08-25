@@ -140,7 +140,7 @@ EMAIL_USE_SSL = False # Before TLS there was SSL
 # django_on_heroku.settings(locals(), staticfiles=False)
 S3 = os.environ.get('S3')
 
-if S3:
+if S3 is True:
     # For AWS S3
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')

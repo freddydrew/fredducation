@@ -11,3 +11,16 @@
     border-radius: 10px;
     margin-bottom: 2%;
 }
+
+.site-name {
+    color: mediumpurple;
+}
+
+#email-box{
+    border-radius: 5px;
+}
+
+#my-email, #copy-email{
+    margin: 2%;
+    align-self: center;
+}

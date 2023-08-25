@@ -27,9 +27,11 @@ urlpatterns = [
     path('', homeView),
     path('about/', aboutView),
     path('contact/', contactView),
-    path('articles/',include('articles.urls')),
+    path('articles/',include('articles.urls'))
 ]
 
 ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED')
-if ADMIN_ENABLED is True:
-    urlpatterns += [path('admin/', admin.site.urls)]
+if ADMIN_ENABLED:
+    print('ADMIN_ENABLED:',ADMIN_ENABLED)
+    urlpatterns.append(path('admin/', admin.site.urls))
+

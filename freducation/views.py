@@ -4,7 +4,7 @@ from .forms import contactForm, contactFormSendMail
 from articles.models import article
 
 def homeView(request):
-    qs = article.objects.all().filter(publish=True).order_by('publishDate')[0:3]
+    qs = article.objects.all().filter(publish=True).order_by('-publishDate')[0:3]
     context = {
         "qs": qs
     }

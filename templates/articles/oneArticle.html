@@ -64,7 +64,7 @@
             <h3 class="articleTitle">{{obj.title}}</h3>
 
             <!-- If person or place, display that info -->
-            {%if obj.postType != 'media'%}
+            {%if obj.postType == 'person' or obj.postType == 'place'%}
                 <h4 class="articleTitle">
                     {{obj.city}}, {{obj.country}}
                 </h4>
@@ -79,11 +79,11 @@
                 </p>
             {%endif%}
 
-            {%if obj.contentEsp != None%}
+            {%if obj.contentEsp.strip != '' %}
             <!-- Keeps spacing from object -->
                 <h6>
-                    Lo que sigue es una traducción de arriba. 
-                    Hágamelo saber si hay errores con mi correo electronico 
+                    Lo que sigue es una traducción de arriba hecho por mi. 
+                    Hágamelo saber si hay errores, con mi correo electronico 
                     <a href="/about/#contact-info">aquí.</a>
                 </h6>
                 <p>
@@ -91,8 +91,8 @@
                 </p>
             {%endif%}
 
-            <span>
-                Published on {{obj.publishDate}}
+            <span id="publishDate">
+                Published {{obj.publishDate}}
             </span>
         </div>
     </div>

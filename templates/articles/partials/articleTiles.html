@@ -17,7 +17,7 @@
                         <h4 class="card-title">
                             {{obj.title}}
                         </h4>
-                        {%if obj.postType != 'media'%}
+                        {%if obj.postType == 'person' or obj.postType == 'place'%}
                             <p class="card-subtitle">
                                 {{obj.city}},
                             </p>
@@ -26,7 +26,7 @@
                             </p>
                         {%endif%}
                         <span>
-                            Published on {{obj.publishDate}}
+                            {{obj.publishDate}}
                         </span>
                     </div>
                 </a>

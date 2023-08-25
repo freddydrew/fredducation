@@ -1,5 +1,9 @@
 .navbar{
-    border-bottom: 2px solid royalblue;
+    border-bottom: 2px solid mediumpurple;
+}
+
+.site-name {
+    color: mediumpurple;
 }
 
 body{
@@ -10,11 +14,8 @@ body{
 /* Footer Styles */
 footer{
     justify-self: self-end;
-}
+    border-top: 2px solid mediumpurple;
 
-.footer{
-    border-top: 2px solid royalblue;
-    margin-top: 5%;
 }
 
 .footer-links {

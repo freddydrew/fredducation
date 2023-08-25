@@ -1,14 +1,16 @@
 .container{
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-bottom: 0%;
 }
 
 .container-lg{
-    margin-top: 2%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
-img{
+.carousel-inner img{
     border-radius: 20px;
-    width: 80%;
+    width: 60%;
     margin: 0% 10%;
 }
 
@@ -20,11 +22,24 @@ img{
     text-decoration: none;
 }
 
-.carousel-caption { 
-    margin-top: 2%;
+.carousel-caption, .carousel-caption p { 
+    margin-top: 1%;
     position: relative;
     left: auto;
     right: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
+#thumbtack{
+    max-width: 3%;
+}
 
+h3{
+    margin-top: 0;
+    margin-bottom: 1%;
+}
+
+hr{
+    margin-top: 0%;
+}

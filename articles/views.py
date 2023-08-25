@@ -20,7 +20,7 @@ class allArticlesView(ListView):
     template_name = 'articles/allArticles.html'
 
     def get_queryset(self):
-        return article.objects.filter(publish=True)
+        return article.objects.filter(publish=True).order_by('-publishDate')
     
 class allArticlesJsonView(View):
     def get(self,*args,**kwargs):

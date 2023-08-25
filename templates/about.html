@@ -6,21 +6,21 @@
 
 <link rel="stylesheet" href="{% static 'css/stylesAbout.css' %}">
 
-
 <!-- What is Freducation? -->
 <section id="about-fredducation">
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
-                <h3>About Fredducation</h3>
+                <h3> 
+                    About <span class="site-name">Fredd</span>ucation
+                </h3>
                 <hr>
                 <p>
                     The goal of Fredducation is to encourage language learners to interact with their target 
                     language in the real world. I aim to accomplish this by sharing my experiences as I learn Spanish, 
                     specifically with the people, places, and media that I have learned so much from.
-
                     I felt that the language learning community that I interacted with was overly concerned 
-                    with things like counting the hours of listening comprehension exercises until a mile stone was 
+                    with things like counting the hours of listening comprehension exercises until a milestone was 
                     reached, debating the usefulness of different learning apps, or how to attain a certain accent 
                     in a target language. I thought to myself “isn’t the point of it all to enjoy the language?”. 
                     So I made a space to show how I enjoy interacting with my target language, Spanish. 
@@ -31,7 +31,6 @@
     </div>
 </section>
 
-
 <section id="about-me">
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -39,8 +38,17 @@
                 <h3>About Me</h3>
                 <hr>
                 <p>
-                    I’m Freddy Drew, creator of Freducation. Recently I decided to stop putting it off and learn Spanish. 
-                    I thought it'd be nice to share how its going. I hope you like it. 
+                    I’m Freddy Drew, creator of Fredducation. Like many people I took spanish 
+                    classes in school but never treated it seriously, so I didn't learn much.
+                    I think growing up I never appreciated the value of speaking a second 
+                    langauge or education in general. Sometime recently that all changed.
+                    I wake up most days with a mission to learn and, most importantly, have 
+                    fun while I'm at it. I thought it'd be nice to reflect on my experiences 
+                    while sharing them with other people, so I made this website. That's me in 
+                    the photo below. It's one of the many photos I've taken while traveling. 
+                    Traveling is very important to me. It is something I feel that I must do. 
+                    It is for that reason that many of the photos on this site of people and places come from 
+                    my travels. I hope you enjoy them especially.
                 </p>
             </div>
         </div>
@@ -49,24 +57,27 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-10 col-lg-6">
-                <img src="{% static 'images/aboutMe.jpg' %}" class="img-fluid">
+                <img src="{% static 'images/aboutMe-min.jpg' %}" class="img-fluid">
             </div>
         </div>
     </div>
 </section>
 
-
 <section id="why-fredducation">
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
-                <h3>Why is it called Fredducation?</h3>
+                <h3>
+                    Why is it called <span class="site-name">Fredd</span>ucation?
+                </h3>
                 <hr>
                 <p>
-                    It’s not just a play on my name. It’s also a recognition that all of the posts 
+                    It’s not just a play on my name and word education. It’s also a recognition that all of the posts 
                     on this site are about the many teachers in my language education. I do not 
-                    consider myself an autodidact. I wish I could give credit to everyone and everythong 
-                    that has helped me.
+                    consider myself an autodidact. Through this site I'm trying to show gratitude for
+                    all the things that have taught me something. Originally it was going to be Freducation 
+                    with only one <strong>d</strong>, but someone already owned most of the top-level domains for that name. 
+                    Also I've always been more of a Freddy than a Fred, so Fredducation it was. 
                 </p>
             </div>
         </div>
@@ -81,14 +92,41 @@
                 <hr>
                 <p>
                     If you find an issue on the site or have questions for me, don't hesitate to
-                    reach out. My email address is <strong>slickfredwin@gmail.com</strong> and 
-                    please give me some time to get back to you. In the meantime, I hope you enjoy 
-                    the site!
+                    reach out. I'm always up to chat about spanish, languages, programming, BMX, whatever! 
+                    My email address is listed below. Please give me some time to get back to you. 
+                    In the meantime, I hope you enjoy the site!
                 </p>
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div id="email-box" class="col-12 bg-light border d-flex justify-content-between">
+                                <strong id="my-email">slickfredwin@gmail.com</strong>
+                                <button id="copy-email" onclick="copyEmail()" class="btn btn-sm btn-outline-dark">Copy</button>                            
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
 
+<div class="position-fixed bottom-0 end-0 p-5" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+        Email copied to clipboard.
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyEmail(){
+        const myEmail = document.getElementById('my-email');
+        navigator.clipboard.writeText(myEmail.innerHTML);
+        var liveToast = document.getElementById('liveToast');
+        var toast = new bootstrap.Toast(liveToast);
+        toast.show()
+    }
+</script>
 
 {%endblock content%}

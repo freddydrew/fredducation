@@ -48,7 +48,8 @@ class article(models.Model):
     postType = models.CharField(max_length=75,null=True,default=None,blank=True,
                                 choices=[("person","Person"),
                                          ("place","Place"),
-                                         ("media","Media")])
+                                         ("media","Media"),
+                                         ("resource","Resource")])
     
     # Custom Manager Call 
     objects = articleManager()
