@@ -31,7 +31,7 @@ urlpatterns = [
 ]
 
 ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED')
-if ADMIN_ENABLED:
+if ADMIN_ENABLED is True:
     print('ADMIN_ENABLED:',ADMIN_ENABLED)
     urlpatterns.append(path('admin/', admin.site.urls))
 
