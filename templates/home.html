@@ -29,7 +29,7 @@
                 
                 <!-- Inner -->
                 <div class="carousel-inner">
-                    {%for obj in qs%}
+                    {%for obj in sliderObjList%}
                         {%if forloop.counter0 == 0%}
                             <!-- Active item -->
                             <div class="carousel-item active" data-bs-interval="10000">
@@ -37,7 +37,7 @@
                                     <img src="{{obj.thumbnail.url}}" class="mx-auto d-block" alt=""/>
                                     <div class="carousel-caption">
                                     <h3>{{obj.title}}</h3>
-                                    {%if obj.postType != 'media'%}
+                                    {%if obj.postType == 'person' or obj.postType == 'place'%}
                                         <p>{{obj.city}}, {{obj.country}}</p>
                                     {%endif%}
                                     </div>
@@ -51,7 +51,7 @@
                                     <img src="{{obj.thumbnail.url}}" class="mx-auto d-block" alt=""/>
                                     <div class="carousel-caption">
                                     <h3>{{obj.title}}</h3>
-                                    {%if obj.postType != 'media'%}
+                                    {%if obj.postType == 'person' or obj.postType == 'place'%}
                                         <p>{{obj.city}}, {{obj.country}}</p>
                                     {%endif%}
                                     </div>
@@ -77,19 +77,32 @@
     </div>
 </div>
 
-<!-- <div class="container-lg">
+<div class="container-lg">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-6">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h3>Pinned Posts</h3>
-                <img id="thumbtack" src="{% static 'images/thumbtack.png' %}" alt="thumbtack">
             </div>
             <hr>
-
-            <p>work in progress</p>
+            {%for obj in pinnedObjList%}
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-3">
+                    <img src="{{obj.thumbnail.url}}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-9">
+                    <div class="card-body">
+                      <h5 class="card-title">{{obj.title}}</h5>
+                      <p class="card-text"></p>
+                      <p class="card-text"><small class="text-muted">Published {{obj.publishDate}}</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {%endfor%}
         </div>
     </div>
-</div> -->
+</div>
 
 {%endblock content%}
 

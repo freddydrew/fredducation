@@ -41,6 +41,7 @@ class article(models.Model):
     alpha3 = models.CharField(max_length=10,null=True,editable=False)
     timestamp = models.DateTimeField(auto_now_add=True,editable=False) 
     updated = models.DateTimeField(auto_now=True,editable=False)
+    pinned = models.BooleanField(null=True,blank=True,default=False)
     publish = models.BooleanField(null=True,blank=True,default=False)
     publishDate = models.DateField(null=True,blank=True,default=None)
     slug = models.SlugField(null=True,editable=False)
@@ -83,7 +84,7 @@ class article(models.Model):
         article.objects.filter(id=self.id).update(alpha3=alpha3)
 
     def setSlug(self):
-        if self.postType == "media":
+        if self.postType != "person" and self.postType != 'place':
             tmpSlug = f'{self.postType}-{self.title}'
         elif self.city == None:
             tmpSlug = f'{self.postType}-{self.title}-{self.alpha3}'
@@ -123,7 +124,10 @@ class articleImage(models.Model):
 # Post save signal method for the article model
 def articlePostSave(instance, created, *args,**kwargs):
     if created or kwargs["update_fields"] != []:
-        instance.setAlpha3()
+        if instance.postType != "person" and instance.postType != 'place':
+            pass
+        else:
+            instance.setAlpha3()
         instance.setSlug() 
         instance.setUpdated()
     

@@ -9,7 +9,17 @@
 .container img{
     filter: drop-shadow(5px 5px 5px #ccc);
     border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.container hr{
+    margin-top: 0;
     margin-bottom: 2%;
+}
+
+.container h3{
+    margin-top: 0;
+    margin-bottom: 1%;
 }
 
 .site-name {

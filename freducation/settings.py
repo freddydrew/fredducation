@@ -137,8 +137,7 @@ EMAIL_PORT = 587 # port google uses for it's smtp
 EMAIL_USE_TLS = True # TLS is a protocol that encrypts and delivers mail securely, for both inbound and outbound mail traffic
 EMAIL_USE_SSL = False # Before TLS there was SSL
 
-# django_on_heroku.settings(locals(), staticfiles=False)
-S3 = os.environ.get('S3')
+S3 = str(os.environ.get('S3')) == "1"
 
 if S3:
     # For AWS S3
@@ -159,6 +158,7 @@ if S3:
 else:
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/4.2/howto/static-files/
+    print('S3:',S3)
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
