@@ -34,6 +34,7 @@ class articleManager(models.Manager):
 # My article model
 class article(models.Model):
     title = models.CharField(max_length=75)
+    description = models.CharField(max_length=100,null=True,blank=True,default=None)
     content = models.TextField(null=True,blank=True)
     contentEsp = models.TextField(null=True,blank=True)
     city = models.CharField(max_length=50,null=True,blank=True,default=None)

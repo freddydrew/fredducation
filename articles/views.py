@@ -24,7 +24,7 @@ class allArticlesView(ListView):
     
 class allArticlesJsonView(View):
     def get(self,*args,**kwargs):
-        articles = list(article.objects.filter(publish=True).values())
+        articles = list(article.objects.filter(publish=True).order_by('-publishDate').values())
         return JsonResponse({'data': articles},safe=False)
 
 def articleSearchView(request):

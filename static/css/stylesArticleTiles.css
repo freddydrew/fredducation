@@ -22,12 +22,13 @@
 
 .card-subtitle{
     text-align: center;
+    height: 15%;
 }
 
-.card span {
+.card-footer {
+    flex: 1 1 auto;
+    text-align: center;
     margin-top: 5%;
     font-size: small;
-    text-align: left;
     color: darkgray;
-    text-indent: 2%;
 }

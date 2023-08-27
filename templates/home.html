@@ -14,7 +14,7 @@
         Here I share the people, places, and media that I've come to know through learning spanish.
     </h6>
     <p>
-        Read more about Fredducation <a href="/about/">here.</a> 
+        Read more about Fredducation <a href="/about/" style="text-decoration: none;">here.</a> 
     </p>
 </div>
 
@@ -39,6 +39,8 @@
                                     <h3>{{obj.title}}</h3>
                                     {%if obj.postType == 'person' or obj.postType == 'place'%}
                                         <p>{{obj.city}}, {{obj.country}}</p>
+                                    {%else%}
+                                        <p>{{obj.description}}</p>
                                     {%endif%}
                                     </div>
                                 </a>
@@ -53,6 +55,8 @@
                                     <h3>{{obj.title}}</h3>
                                     {%if obj.postType == 'person' or obj.postType == 'place'%}
                                         <p>{{obj.city}}, {{obj.country}}</p>
+                                    {%else%}
+                                        <p>{{obj.description}}</p>
                                     {%endif%}
                                     </div>
                                 </a>
@@ -77,6 +81,8 @@
     </div>
 </div>
 
+
+<!-- PINNED POSTS -->
 <div class="container-lg">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-6">
@@ -85,24 +91,40 @@
             </div>
             <hr>
             {%for obj in pinnedObjList%}
-            <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-3">
-                    <img src="{{obj.thumbnail.url}}" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-9">
-                    <div class="card-body">
-                      <h5 class="card-title">{{obj.title}}</h5>
-                      <p class="card-text"></p>
-                      <p class="card-text"><small class="text-muted">Published {{obj.publishDate}}</small></p>
+            <a href="{{obj.getAbsoluteUrl}}" style="text-decoration: none; color: inherit;">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-3">
+                        <img src="{{obj.thumbnail.url}}" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-9">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{obj.title}}
+                            </h5>
+                            {%if obj.postType == 'person' or obj.postType == 'place'%}
+                                <p>{{obj.city}}, {{obj.country}}</p>
+                            {%else%}
+                                <p>{{obj.description}}</p>
+                            {%endif%}
+                            <p class="card-text text-truncate">
+                                {{obj.content}}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Published {{obj.publishDate}}
+                                </small>
+                            </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+            </a>
             {%endfor%}
         </div>
     </div>
 </div>
+<!-- PINNED POSTS -->
 
 {%endblock content%}
 
