@@ -34,11 +34,11 @@ class articleManager(models.Manager):
 # My article model
 class article(models.Model):
     title = models.CharField(max_length=75)
-    description = models.CharField(max_length=100,null=True,blank=True,default=None)
     content = models.TextField(null=True,blank=True)
     contentEsp = models.TextField(null=True,blank=True)
     city = models.CharField(max_length=50,null=True,blank=True,default=None)
     country = models.CharField(max_length=50,null=True,blank=True,default=None)
+    description = models.CharField(max_length=100,null=True,blank=True,default=None)
     alpha3 = models.CharField(max_length=10,null=True,editable=False)
     timestamp = models.DateTimeField(auto_now_add=True,editable=False) 
     updated = models.DateTimeField(auto_now=True,editable=False)
@@ -51,7 +51,8 @@ class article(models.Model):
                                 choices=[("person","Person"),
                                          ("place","Place"),
                                          ("media","Media"),
-                                         ("resource","Resource")])
+                                         ("resource","Resource"),
+                                         ("food","Food")])
     
     # Custom Manager Call 
     objects = articleManager()
