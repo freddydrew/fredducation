@@ -6,21 +6,22 @@ async function loadMore(){
         return res;
     })
 
+    
     var currentPostCount = document.querySelectorAll(".card").length;
-    console.log(currentPostCount)
     var startIdx = currentPostCount;
     var postsToLoad = 4;
-
+    
     const options = {year: 'numeric', month: 'short', day: 'numeric' };
-
     for (let i = startIdx; i < (startIdx + postsToLoad); i++){
-        var obj = response.data[i]
+    var obj = response.data[i];
+    var thumbnail = new URL(`https://fredducation.s3.amazonaws.com/${obj.thumbnail}`)
+
         if(obj.postType == "person" || "place"){
             out = `
                 <a href="${obj.slug}">
                     <div class="card border-dark my-2 text-dark h-100">
                         <img class="card-img-top" 
-                        src="/${obj.thumbnail}" 
+                        src="${thumbnail}" 
                         alt="${obj.title} thumbnail">
                         <h4 class="card-title">
                             ${obj.title}
@@ -36,13 +37,13 @@ async function loadMore(){
                         </div>
                     </div>
                 </a>
-        `
+        `;
         } else {
             out = `
             <a href="${obj.slug}">
                 <div class="card border-dark my-2 text-dark h-100">
                     <img class="card-img-top" 
-                    src="/${obj.thumbnail}" 
+                    src="${obj.thumbnail.url}" 
                     alt="${obj.title} thumbnail">
                     <h4 class="card-title">
                         ${obj.title}
@@ -55,13 +56,13 @@ async function loadMore(){
                     </div>
                 </div>
             </a>
-            `
+            `;
         }
         
     var div = document.createElement("div");
-    div.classList.add('col-6')
-    div.classList.add('col-lg-3')
-    div.innerHTML = out
+    div.classList.add('col-6');
+    div.classList.add('col-lg-3');
+    div.innerHTML = out;
     document.getElementsByClassName('row')[0].appendChild(div);
     }  
 }
