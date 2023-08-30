@@ -4,16 +4,39 @@
 
 <link rel="stylesheet" href="{% static 'css/stylesAllArticles.css' %}">
 
+<div class="container">
+    <div class="col-12 mb-0">
+        <h3>All Posts</h3>
+        <hr>
+    </div>
+</div>
+
+<!-- Showing X of X articles -->
+<div class="container current-count my-0"></div>
+
+
 {%include "articles/partials/articleTiles.html" %}
 
+<!-- Load More Articles Button -->
 <div class="container mt-5">
-    <button type="button" class="btn btn-outline-dark btn-lg" onclick="loadMore()">
+    <button type="button" class="btn btn-outline-dark btn-lg" 
+    onclick="loadMore();currentArticleCount()">
         Load More
     </button> 
 </div>
 
-<script src="{% static 'javascript/loadMoreArticles.js' %}" type="text/javascript">
-    
+<!-- Showing X of X articles -->
+<div class="container current-count"></div>
+
+<script src="{% static 'javascript/allArticles.js' %}" type="text/javascript"></script>
+
+<script>
+    var loadCount = 0;
+    if (loadCount == 0){
+        currentArticleCount();
+    }
+    loadCount += 1;
 </script>
+
 {%endblock content%}
 

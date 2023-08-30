@@ -30,7 +30,7 @@
     border-radius: 5px;
 }
 
-#my-email, #copy-email{
+.my-email{
     margin: 2%;
     align-self: center;
 }

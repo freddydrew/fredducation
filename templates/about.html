@@ -18,10 +18,10 @@
                 <p>
                     The goal of Fredducation is to encourage language learners to interact with their target 
                     language in the real world. I aim to accomplish this by sharing my experiences as I learn Spanish, 
-                    specifically with the people, places, and media that I have learned so much from.
+                    specifically with the people, places, media, food (yum!), and resources that I have learned so much from.
                     I felt that the language learning community that I interacted with was overly concerned 
                     with things like counting the hours of listening comprehension exercises until a milestone was 
-                    reached, debating the usefulness of different learning apps, or how to attain a certain accent 
+                    reached, debating which learning apps bring fluency (the answer is none), or how to attain a certain accent 
                     in a target language. I thought to myself “isn’t the point of it all to enjoy the language?”. 
                     So I made a space to show how I enjoy interacting with my target language, Spanish. 
                     Hopefully this pulls people away from what’s not important in their own language learning journey.
@@ -100,8 +100,8 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div id="email-box" class="col-12 bg-light border d-flex justify-content-between">
-                                <strong id="my-email">slickfredwin@gmail.com</strong>
-                                <button id="copy-email" onclick="copyEmail()" class="btn btn-sm btn-outline-dark">Copy</button>                            
+                            <h6 class="my-email">CONTACT EMAIL:</h6>    
+                            <strong class="my-email">slickfredwin@gmail.com</strong>
                         </div>
                     </div>
                 </div>
@@ -110,23 +110,4 @@
         </div>
     </div>
 </section>
-
-<div class="position-fixed bottom-0 end-0 p-5" style="z-index: 11">
-    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body">
-        Email copied to clipboard.
-        </div>
-    </div>
-</div>
-
-<script>
-    function copyEmail(){
-        const myEmail = document.getElementById('my-email');
-        navigator.clipboard.writeText(myEmail.innerHTML);
-        var liveToast = document.getElementById('liveToast');
-        var toast = new bootstrap.Toast(liveToast);
-        toast.show()
-    }
-</script>
-
 {%endblock content%}

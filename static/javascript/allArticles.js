@@ -1,3 +1,32 @@
+async function currentArticleCount(){
+    // Get total article count
+    url = '/articles/jsonListView/';
+    const response = await fetch(url)
+    .then(res => res.json())
+    .then(res => {
+        return res;
+    })
+
+    var total = response.data.length;
+    
+    // Get current count
+    var count = document.querySelectorAll(".card").length;
+    var divs = document.querySelectorAll(".current-count");
+    
+    out = `
+    <p>
+        <small>
+            <strong>
+                Showing ${count} of ${total} posts
+            </strong>
+        </small>
+    </p>
+    `
+    divs[0].innerHTML = out;
+    divs[1].innerHTML = out;
+}
+
+
 async function loadMore(){
     url = '/articles/jsonListView/';
     const response = await fetch(url)
@@ -14,6 +43,8 @@ async function loadMore(){
     const options = {year: 'numeric', month: 'short', day: 'numeric' };
     for (let i = startIdx; i < (startIdx + postsToLoad); i++){
     var obj = response.data[i];
+    var publishDate = new Date(obj.publishDate).toLocaleDateString('en-us', options);
+
     var thumbnail = new URL(`https://fredducation.s3.amazonaws.com/${obj.thumbnail}`)
 
         if(obj.postType == "person" || "place"){
@@ -33,7 +64,7 @@ async function loadMore(){
                             ${obj.country}
                         </p>
                         <div class="card-footer">
-                            ${new Date(obj.publishDate).toLocaleDateString('en-us', options)}
+                            ${publishDate}
                         </div>
                     </div>
                 </a>
@@ -52,7 +83,7 @@ async function loadMore(){
                         ${obj.description}
                     </p>
                     <div class="card-footer">
-                        ${new Date(obj.publishDate).toLocaleDateString('en-us', options)}
+                        ${publishDate}
                     </div>
                 </div>
             </a>
