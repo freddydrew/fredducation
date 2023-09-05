@@ -50,7 +50,7 @@ async function loadMore(){
         if(obj.postType == "person" || "place"){
             out = `
                 <a href="${obj.slug}">
-                    <div class="card border-dark my-2 text-dark h-100">
+                    <div class="card border-dark text-dark h-100">
                         <img class="card-img-top" 
                         src="${thumbnail}" 
                         alt="${obj.title} thumbnail">
@@ -72,7 +72,7 @@ async function loadMore(){
         } else {
             out = `
             <a href="${obj.slug}">
-                <div class="card border-dark my-2 text-dark h-100">
+                <div class="card border-dark text-dark h-100">
                     <img class="card-img-top" 
                     src="${obj.thumbnail.url}" 
                     alt="${obj.title} thumbnail">
