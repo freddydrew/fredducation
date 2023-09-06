@@ -93,7 +93,7 @@ class article(models.Model):
         else:
             tmpSlug = f'{self.postType}-{self.title}-{self.city}-{self.alpha3}'
         slug = slugfiy(tmpSlug)
-        if article.objects.filter(slug=slug).count() != 0:
+        if article.objects.filter(slug=slug).exclude(id=self.id).count() != 0:
             slug = f'{slug}-{article.objects.filter(slug=slug).count()+1}'
         article.objects.filter(id=self.id).update(slug=slug)
     

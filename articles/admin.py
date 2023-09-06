@@ -8,7 +8,7 @@ class articleImageInline(admin.StackedInline):
 
 class articleAdmin(admin.ModelAdmin):
     # What fields I will see in the multiple objects view
-    list_display = ['title','country','postType','publish']
+    list_display = ['title','publish','publishDate','postType','country']
     # For the uneditable fields
     readonly_fields = ['timestamp','updated','alpha3','slug']
     inlines = [articleImageInline]
