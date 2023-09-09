@@ -43,11 +43,11 @@ async function loadMore(){
     const options = {year: 'numeric', month: 'short', day: 'numeric' };
     for (let i = startIdx; i < (startIdx + postsToLoad); i++){
     var obj = response.data[i];
-    var publishDate = new Date(obj.publishDate).toLocaleDateString('en-us', options);
+    let publishDate = new Date(obj.publishDate).toLocaleDateString('en-us', options);
 
-    var thumbnail = new URL(`https://fredducation.s3.amazonaws.com/${obj.thumbnail}`)
+    let thumbnail = new URL(`https://fredducation.s3.amazonaws.com/${obj.thumbnail}`)
 
-        if(obj.postType == "person" || "place"){
+        if(obj.postType == "person" || obj.postType == "place"){
             out = `
                 <a href="${obj.slug}">
                     <div class="card border-dark text-dark h-100">
@@ -74,7 +74,7 @@ async function loadMore(){
             <a href="${obj.slug}">
                 <div class="card border-dark text-dark h-100">
                     <img class="card-img-top" 
-                    src="${obj.thumbnail.url}" 
+                    src="${thumbnail}" 
                     alt="${obj.title} thumbnail">
                     <h4 class="card-title">
                         ${obj.title}

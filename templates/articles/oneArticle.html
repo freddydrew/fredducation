@@ -87,7 +87,7 @@
             {%if obj.content != None%}
             <!-- Keeps spacing from object -->
                 <p>
-                    {{obj.content|linebreaks}}
+                    {{obj.content|linebreaks|urlize}}
                 </p>
             {%endif%}
 
@@ -100,7 +100,7 @@
                     Si he cometido errors, dimelo <a href="/about/#contact-info">aquí.</a>
                 </h6>
                 <p>
-                    {{obj.contentEsp|linebreaks}}
+                    {{obj.contentEsp|linebreaks|urlize}}
                 </p>
             {%endif%}
 
