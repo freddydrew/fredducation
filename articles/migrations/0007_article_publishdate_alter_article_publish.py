@@ -15,7 +15,13 @@ class Migration(migrations.Migration):
             name='publishDate',
             field=models.DateField(blank=True, default=None, null=True),
         ),
-        migrations.AlterField(
+
+        migrations.RemoveField(
+            model_name='article',
+            name='publish',
+        ),
+
+        migrations.AddField(
             model_name='article',
             name='publish',
             field=models.BooleanField(blank=True, default=False, null=True),

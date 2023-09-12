@@ -77,13 +77,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'freducation.wsgi.application'
 
 
-# Database
+# Database 
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# Default Django is sqlite3, I will be using postgresql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# PostgreSQL provisioned on AWS RDS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': os.environ.get('DB_ENGINE'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
@@ -141,7 +154,6 @@ S3 = str(os.environ.get('S3')) == "1"
 
 if S3:
     # For AWS S3
-    print('S3:',S3)
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
@@ -158,7 +170,6 @@ if S3:
 else:
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/4.2/howto/static-files/
-    print('S3:',S3)
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
