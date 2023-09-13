@@ -4,6 +4,9 @@
 <!-- Load Static -->
 {% load static %}
 
+<!-- Load cutsom tags -->
+{% load markdownTag %}
+
 <link rel="stylesheet" href="{% static 'css/stylesArticle.css' %}">
 
 <div class="container">
@@ -87,7 +90,7 @@
             {%if obj.content != None%}
             <!-- Keeps spacing from object -->
                 <p>
-                    {{obj.content|linebreaks|urlize}}
+                    {{obj.content|markdown|safe}}
                 </p>
             {%endif%}
 
@@ -100,7 +103,7 @@
                     Si he cometido errors, dimelo <a href="/about/#contact-info">aquí.</a>
                 </h6>
                 <p>
-                    {{obj.contentEsp|linebreaks|urlize}}
+                    {{obj.contentEsp|markdown|safe}}
                 </p>
             {%endif%}
 
