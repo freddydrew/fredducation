@@ -46,6 +46,8 @@ def articleSearchView(request):
     # Using old custom search queryset methods defined in model
     # object_list = article.objects.search(query=query).filter(publish=True)
     context={
-        'object_list': object_list #default name
+        'object_list': object_list, #default name
+        'searchQuery': query
     }
+
     return render(request,'articles/search.html',context=context)
