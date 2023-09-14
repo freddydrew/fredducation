@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'articles',
     'storages',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -173,3 +174,6 @@ else:
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+
+# For django-taggit package 
+TAGGIT_CASE_INSENSITIVE = True

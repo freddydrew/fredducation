@@ -37,7 +37,8 @@ def articleSearchView(request):
                           'content',
                           'contentEsp',
                           'postType',
-                          'publishDate')
+                          'publishDate',
+                          'tags__name')
     
     # Full text search with postgresql
     object_list = article.objects.annotate(

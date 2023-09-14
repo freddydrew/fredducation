@@ -20,13 +20,13 @@ from django.urls import path, include
 from .views import (
     homeView,
     aboutView,
-    contactView
+    # contactView
 )
 
 urlpatterns = [
     path('', homeView),
     path('about/', aboutView),
-    path('contact/', contactView),
+    # path('contact/', contactView),
     path('articles/',include('articles.urls'))
 ]
 

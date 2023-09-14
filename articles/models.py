@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.utils import timezone
 from .utils import slugfiy
 import pycountry
+from taggit.managers import TaggableManager
 
 # Define Custom QuerySet behavior
 class articleQuerySet(models.QuerySet):
@@ -53,6 +54,7 @@ class article(models.Model):
                                          ("media","Media"),
                                          ("resource","Resource"),
                                          ("food","Food")])
+    tags = TaggableManager()
     
     # Custom Manager Call 
     objects = articleManager()

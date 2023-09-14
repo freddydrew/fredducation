@@ -43,6 +43,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
+
+        
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -55,6 +57,10 @@
                 <a class="nav-link" href="/articles/">All Posts</a>
               </li>
             </ul>
+
+            <a href="https://www.buymeacoffee.com/derfwerd" class="nav-link ps-0 pe-1">
+                <img src="{% static 'images/bmc-button.svg' %}" height="38" alt="bmc-logo">
+            </a>
 
             <form action='/articles/search/' method="GET" class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search All Posts" name="q" aria-label="Search">
@@ -71,8 +77,11 @@
       <footer class="footer bg-dark py-3">
         <div class="container-fluid text-muted">
           <ul class="footer-links">
-            <li class="footer-item">
+            <li class="footer-item py-1">
               <a class="link-secondary" href="/about/#contact-info">Contact</a>
+            </li>
+            <li class="footer-item py-1">
+              <a class="link-secondary" href="https://www.buymeacoffee.com/derfwerd">Support Fredducation</a>
             </li>
             <hr>
             <li class="footer-item">
@@ -82,7 +91,5 @@
         </div>
       </footer>
 
-      <script>  
-      </script>
 </body>
 </html>
