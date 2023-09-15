@@ -1,11 +1,8 @@
 bin/
 lib/
 lib64/
+static/
 staticfiles/
 .env
-db.sqlite3
 aws/
-awscliv2.zip
-notes.md
 .vscode/
-dataDump/

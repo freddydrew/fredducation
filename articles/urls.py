@@ -7,9 +7,10 @@ from .views import (
     allArticlesJsonView
 )
 
+
 app_name = 'articles'
 urlpatterns = [
-    path('search/',articleSearchView),
+    path('search/',articleSearchView,name="search"),
     path('',allArticlesView.as_view(),name='allArticles'),
     path('jsonListView/',allArticlesJsonView.as_view(),name='articlesJson'),
     path('<slug:slug>/',oneArticleView, name='oneArticle'),

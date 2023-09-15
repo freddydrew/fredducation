@@ -17,17 +17,24 @@ Including another URLconf
 import os
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+from articles.sitemaps import articleSiteMap
 from .views import (
     homeView,
     aboutView,
     # contactView
 )
 
+sitemaps = {'static': StaticViewSitemap,'articles': articleSiteMap}
+
 urlpatterns = [
-    path('', homeView),
-    path('about/', aboutView),
-    # path('contact/', contactView),
-    path('articles/',include('articles.urls'))
+    path('', homeView,name='home'),
+    path('about/', aboutView,name='about'),
+    # path('contact/', contactView,name='contact'),
+    path('articles/',include('articles.urls')),
+    path("sitemap.xml",sitemap,{"sitemaps": sitemaps},
+    name="django.contrib.sitemaps.views.sitemap")
 ]
 
 ADMIN_ENABLED = str(os.environ.get('ADMIN_ENABLED')) == "1"
