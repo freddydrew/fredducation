@@ -26,6 +26,10 @@
     text-decoration: none;
 }
 
+#welcomeMsg p{
+    margin-bottom: 1%;
+}
+
 .carousel-caption, .carousel-caption p { 
     margin-top: 1%;
     position: relative;
