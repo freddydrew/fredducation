@@ -2,7 +2,12 @@ from django.shortcuts import render
 from .models import article
 from django.views.generic import ListView, View 
 from django.http import JsonResponse
-from django.contrib.postgres.search import SearchQuery, SearchVector, SearchRank 
+from django.contrib.postgres.search import (
+    SearchQuery, 
+    SearchVector, 
+    SearchRank 
+)
+from django.contrib.postgres.aggregates import StringAgg
 
 # Different article model views
 def oneArticleView(request,slug=None):
@@ -29,7 +34,9 @@ class allArticlesJsonView(View):
         return JsonResponse({'data': articles},safe=False)
 
 def articleSearchView(request):
-    query = request.GET.get('q')
+    q = request.GET.get('q')
+    query = SearchQuery(q)
+        
     vector = SearchVector('title',
                           'city',
                           'country',
@@ -38,7 +45,7 @@ def articleSearchView(request):
                           'contentEsp',
                           'postType',
                           'publishDate',
-                          'tags__name')
+                          StringAgg('tags__name',delimiter=' '))
     
     # Full text search with postgresql
     object_list = article.objects.annotate(
@@ -48,7 +55,7 @@ def articleSearchView(request):
     # object_list = article.objects.search(query=query).filter(publish=True)
     context={
         'object_list': object_list, #default name
-        'searchQuery': query
+        'searchQuery': q
     }
 
     return render(request,'articles/search.html',context=context)
