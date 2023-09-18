@@ -20,19 +20,20 @@ from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 from articles.sitemaps import articleSiteMap
+from contact.sitemaps import contactSiteMap
 from .views import (
     homeView,
     aboutView,
-    # contactView
 )
 
-sitemaps = {'static': StaticViewSitemap,'articles': articleSiteMap}
+sitemaps = {'static': StaticViewSitemap,'articles': articleSiteMap,
+            'contact': contactSiteMap}
 
 urlpatterns = [
     path('', homeView,name='home'),
     path('about/', aboutView,name='about'),
-    # path('contact/', contactView,name='contact'),
     path('articles/',include('articles.urls')),
+    path('contact/',include('contact.urls')),
     path("sitemap.xml",sitemap,{"sitemaps": sitemaps},
     name="django.contrib.sitemaps.views.sitemap")
 ]

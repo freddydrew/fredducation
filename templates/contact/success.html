@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!-- Load Static -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesSuccess.css' %}">
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-10">
+            <h2>Your message was successfully submitted!</h2>
+            <p>
+                I'll respond to you as soon as I can. Remember, this is a one man operation.
+            </p>
+            <small>
+                This page will automatically redirect to the homepage in a moment.
+            </small>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}

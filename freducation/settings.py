@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps', #for sitemap auto gen
     'bootstrap5',
     'articles',
+    'contact',
     'storages',
     'taggit',
 ]

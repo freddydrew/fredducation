@@ -2,10 +2,6 @@
     margin-top: 2%;
 }
 
-.container p{
-    text-indent: 40px;
-}
-
 .container img{
     filter: drop-shadow(5px 5px 5px #ccc);
     border-radius: 10px;
@@ -24,13 +20,4 @@
 
 .site-name {
     color: mediumpurple;
-}
-
-#email-box{
-    border-radius: 5px;
-}
-
-.my-email{
-    margin: 2%;
-    align-self: center;
 }
