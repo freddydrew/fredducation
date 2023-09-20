@@ -1,0 +1,44 @@
+<!-- Load static files -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesSubscribeBox.css' %}">
+
+<div class="container justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-m-8 col-lg-8">
+            <h3 >
+                Subscribe for Updates!
+            </h3>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST">
+                        <!-- need this token every time in django for POST-->
+                        {%csrf_token%}
+
+                        {%for field in form%}
+                        <div>
+                            {%if field.errors%}
+                                <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                type="text" class="form-control is-invalid"
+                                placeholder="{{field.label}}">
+                                <div class="invalid-feedback">
+                                    {{ field.errors }}
+                                </div>
+                        {%else%}
+                                <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                type="text" class="form-control"
+                                placeholder="{{field.label}}">
+                        {%endif%}
+                        </div>
+                        {%endfor%}
+
+                        <button type="submit" class="btn btn-outline-dark btn-lg">
+                            SUBSCRIBE
+                        </button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

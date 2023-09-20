@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'articles',
     'contact',
+    'subscriber',
     'storages',
     'taggit',
 ]

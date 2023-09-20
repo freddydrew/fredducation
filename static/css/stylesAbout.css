@@ -1,5 +1,7 @@
 .container{
-    margin-top: 2%;
+    margin-top: 5vh;
+    height: auto;
+    flex-grow: 3;
 }
 
 .container img{
@@ -14,7 +16,6 @@
 }
 
 .container h3{
-    margin-top: 0;
     margin-bottom: 1%;
 }
 

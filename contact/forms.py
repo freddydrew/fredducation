@@ -16,6 +16,7 @@ class contactForm(forms.Form):
                               max_length=2000,
                               help_text="In X article you forgot the ñ in...")
 
+
 '''
 This sends me the contact forms contents so I can respond
 by simply hitting reply from my email, super simple.

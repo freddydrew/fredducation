@@ -6,50 +6,64 @@
 
 <link rel="stylesheet" href="{% static 'css/stylesContact.css' %}">
 
-<div class="container col-12 col-lg-6">
-    <form method="POST">
+<div class="container contact-box">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-m-8 col-lg-8">
+            <h3 >
+                Contact
+            </h3>
+            <hr>
+            <p>
+                If you find any problems with the site or you have questions
+                , please dont hesitate to reach out. I will try to respond to 
+                any questions as fast as I can. This site is still under 
+                construction so my responses may take some time. 
+            </p>   
+            <form method="POST">
 
-        <!-- need this token every time in django for POST-->
-        {%csrf_token%}
+                <!-- need this token every time in django for POST-->
+                {%csrf_token%}
 
-        {%for field in form%}
-        <div>
-            <label for="{{field.id_for_label}}">
-                {{field.label}}
-            </label>
-            {%if field.errors%}
-                {%if field.name == 'message'%}
-                    <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
-                    type="text" class="form-control is-invalid" rows="4" 
-                    placeholder="{{field.help_text}}"></textarea>
-                    <div class="invalid-feedback">
-                        {{ field.errors }}
-                    </div>
+                {%for field in form%}
+                <div>
+                    <label for="{{field.id_for_label}}">
+                        {{field.label}}
+                    </label>
+                    {%if field.errors%}
+                        {%if field.name == 'message'%}
+                            <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
+                            type="text" class="form-control is-invalid" rows="4" 
+                            placeholder="{{field.help_text}}"></textarea>
+                            <div class="invalid-feedback">
+                                {{ field.errors }}
+                            </div>
+                        {%else%}
+                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                            type="text" class="form-control is-invalid"
+                            placeholder="{{field.help_text}}">
+                            <div class="invalid-feedback">
+                                {{ field.errors }}
+                            </div>
+                        {%endif%}
                 {%else%}
-                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                    type="text" class="form-control is-invalid"
-                    placeholder="{{field.help_text}}">
-                    <div class="invalid-feedback">
-                        {{ field.errors }}
-                    </div>
+                        {%if field.name == 'message'%}
+                            <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
+                            type="text" class="form-control" rows="4"
+                            placeholder="{{field.help_text}}"></textarea>
+                        {%else%}
+                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                            type="text" class="form-control"
+                            placeholder="{{field.help_text}}">
+                        {%endif%}
                 {%endif%}
-           {%else%}
-                {%if field.name == 'message'%}
-                    <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
-                    type="text" class="form-control" rows="4"
-                    placeholder="{{field.help_text}}"></textarea>
-                {%else%}
-                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                    type="text" class="form-control"
-                    placeholder="{{field.help_text}}">
-                {%endif%}
-           {%endif%}
+                </div>
+                {%endfor%}
+
+                <button type="submit" class="btn btn-outline-dark btn-lg">
+                    Send Message
+                </button> 
+            </form>
         </div>
-        {%endfor%}
-
-        <button type="submit" class="btn btn-outline-dark btn-lg">
-            Send Message
-        </button> 
-    </form>
+    </div>
 </div>
 {%endblock content%}

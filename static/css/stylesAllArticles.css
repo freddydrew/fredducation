@@ -1,5 +1,7 @@
 .container{
-    margin-top: 2%;
+    margin-top: 5vh;
+    height: auto;
+    flex-grow: 3;
     align-items: center;
     justify-content: center;
     display: flex;

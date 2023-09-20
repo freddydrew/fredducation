@@ -7,32 +7,31 @@
 <!-- Load CSS -->
 <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
 
-<div class="container-lg" id="welcomeMsg">
+<div class="container" id="welcomeMsg">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-m-10 col-lg-8">
+        <div class="col-12 col-m-8 col-lg-8">
             <h2>
                 A Language Acquisition Blog 
             </h2>
             <p>
-                Weekly posts related to my journey. 
-                Read more about Fredducation <a href="/about/" style="text-decoration: none;">here.</a> 
+                Weekly posts related to my learning journey.
             </p>
         
             <p>
                 <strong>
-                    If you're enjoying the site, please consider a 
-                    <a href="https://www.buymeacoffee.com/derfwerd">donation.</a>
+                    If you're enjoying the site, please consider 
+                    <a href="https://www.buymeacoffee.com/derfwerd">donating.</a>
                 </strong>
             </p>
         </div>
     </div>
-    
 </div>
 
+{% include 'subscribe/partials/subscribeBox.html' %}
 
-<div class="container-lg">
+<div class="container">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-m-10 col-lg-8">
+        <div class="col-12 col-m-8 col-lg-8">
             <h3>Recent Posts</h3>
             <hr>
             <!-- Carousel wrapper -->
@@ -94,9 +93,9 @@
 
 
 <!-- PINNED POSTS -->
-<div class="container-lg">
+<!-- <div class="container">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-m-8 col-lg-8">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h3>Pinned Posts</h3>
             </div>
@@ -134,7 +133,7 @@
             {%endfor%}
         </div>
     </div>
-</div>
+</div> -->
 <!-- PINNED POSTS -->
 
 {%endblock content%}
