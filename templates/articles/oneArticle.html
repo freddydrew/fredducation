@@ -17,6 +17,43 @@
     </a>
 </div>
 
+<!-- Displaying content title and location -->
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-lg-8">
+            <!-- Display Title -->
+            <h1 class="articleTitle">{{obj.title}}</h1>
+
+            <!-- If person or place, display that info -->
+            {%if obj.postType == 'person' or obj.postType == 'place'%}
+                <h3 class="articleTitle">
+                    {{obj.city}}, {{obj.country}}
+                </h3>
+            {%else%}
+                <h3 class="articleTitle">
+                    {{obj.description}}
+                </h3>
+            {%endif%}
+            <p class="articleTitle">
+                <strong>
+                    By Freddy
+                </strong>
+            </p>
+            <p class="articleTitle text-muted">
+                <strong>
+                    {{obj.publishDate|date:"F j, Y"}}
+                </strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 <!-- For when there is only one image, just display it -->
 {%if obj.articleimage_set.count == 1%}
 
@@ -67,24 +104,9 @@
 {%endif%}
 
 
-<!-- Displaying content title and location -->
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-8">
-            <!-- Display Title -->
-            <h3 class="articleTitle">{{obj.title}}</h3>
-
-            <!-- If person or place, display that info -->
-            {%if obj.postType == 'person' or obj.postType == 'place'%}
-                <h4 class="articleTitle">
-                    {{obj.city}}, {{obj.country}}
-                </h4>
-            {%else%}
-                <h4 class="articleTitle">
-                    {{obj.description}}
-                </h4>
-            {%endif%}
-
             <!-- Article Content, writeup -->
             <hr>
             {%if obj.content != None%}
@@ -107,9 +129,10 @@
                 </p>
             {%endif%}
 
-            <span id="publishDate">
-                Published {{obj.publishDate}}
-            </span>
+            <small class="text-muted">
+                Published {{obj.publishDate|date:"F j, Y"}}
+            </small>
+                
         </div>
     </div>
 </div>
