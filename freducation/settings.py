@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'subscriber',
     'storages',
     'taggit',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -180,3 +181,7 @@ else:
 
 # For django-taggit package 
 TAGGIT_CASE_INSENSITIVE = True
+
+# For Google reCAPTCHA 
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')

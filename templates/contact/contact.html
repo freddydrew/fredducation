@@ -25,40 +25,55 @@
                 {%csrf_token%}
 
                 {%for field in form%}
-                <div>
-                    <label for="{{field.id_for_label}}">
-                        {{field.label}}
-                    </label>
-                    {%if field.errors%}
-                        {%if field.name == 'message'%}
-                            <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
-                            type="text" class="form-control is-invalid" rows="4" 
-                            placeholder="{{field.help_text}}"></textarea>
-                            <div class="invalid-feedback">
-                                {{ field.errors }}
-                            </div>
+                    {%if field.name != 'recaptcha'%}
+                        <div>
+                            <label for="{{field.id_for_label}}">
+                                {{field.label}}
+                            </label>
+                            {%if field.errors%}
+                                {%if field.name == 'message'%}
+                                    <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
+                                    type="text" class="form-control is-invalid" rows="4" 
+                                    placeholder="{{field.help_text}}"></textarea>
+                                    <div class="invalid-feedback">
+                                        {{ field.errors }}
+                                    </div>
+                                {%else%}
+                                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                    type="text" class="form-control is-invalid"
+                                    placeholder="{{field.help_text}}">
+                                    <div class="invalid-feedback">
+                                        {{ field.errors }}
+                                    </div>
+                                {%endif%}
                         {%else%}
-                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                            type="text" class="form-control is-invalid"
-                            placeholder="{{field.help_text}}">
-                            <div class="invalid-feedback">
-                                {{ field.errors }}
-                            </div>
+                                {%if field.name == 'message'%}
+                                    <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
+                                    type="text" class="form-control" rows="4"
+                                    placeholder="{{field.help_text}}"></textarea>
+                                {%else%}
+                                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                    type="text" class="form-control"
+                                    placeholder="{{field.help_text}}">
+                                {%endif%}
                         {%endif%}
-                {%else%}
-                        {%if field.name == 'message'%}
-                            <textarea name="{{field.name}}" id="{{field.id_for_label}}" 
-                            type="text" class="form-control" rows="4"
-                            placeholder="{{field.help_text}}"></textarea>
-                        {%else%}
-                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                            type="text" class="form-control"
-                            placeholder="{{field.help_text}}">
-                        {%endif%}
-                {%endif%}
-                </div>
+                        </div>
+                    {%endif%}
                 {%endfor%}
 
+                {%if form.recaptcha.errors%}
+                    <div class="mt-4">
+                        {{form.recaptcha}}
+                    </div>
+                    <small class="text-danger mt-4">
+                        {{form.recaptcha.errors}}
+                    </small>
+                {%else%}
+                    <div class="mt-4">
+                        {{form.recaptcha}}
+                    </div>
+                {%endif%}
+                
                 <button type="submit" class="btn btn-outline-dark btn-lg">
                     Send Message
                 </button> 

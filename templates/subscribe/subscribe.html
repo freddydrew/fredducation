@@ -23,24 +23,42 @@
                 {%csrf_token%}
 
                 {%for field in form%}
-                <div>
-                    <label for="{{field.id_for_label}}">
-                        {{field.label}}:
-                    </label>
-                    {%if field.errors%}
-                        <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                        type="text" class="form-control is-invalid"
-                        placeholder="{{field.help_text}}">
-                        <div class="invalid-feedback">
-                            {{ field.errors }}
+                    {% if field.name != 'recaptcha' %}
+                        <div>
+                            <label for="{{field.id_for_label}}">
+                                {{field.label}}:
+                            </label>
+                            {%if field.errors%}
+                                <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                type="text" class="form-control is-invalid"
+                                placeholder="{{field.help_text}}">
+                                <div class="invalid-feedback">
+                                    {{ field.errors }}
+                                </div>
+                            {%else%}
+                                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                                    type="text" class="form-control"
+                                    placeholder="{{field.help_text}}">
+                            {%endif%}
                         </div>
-                    {%else%}
-                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                            type="text" class="form-control"
-                            placeholder="{{field.help_text}}">
                     {%endif%}
-                </div>
                 {%endfor%}
+
+                {%if form.recaptcha.errors%}
+                    <div align="center" class="mt-4">
+                        {{form.recaptcha}}
+                        <small class="text-danger">
+                            <strong>
+                                Are you a robot!?
+                            </strong>
+                        </small>
+                    </div>
+                    
+                {%else%}
+                    <div align="center" class="mt-4">
+                        {{form.recaptcha}}
+                    </div>
+                {%endif%}
 
                 <button type="submit" class="btn btn-outline-dark btn-lg">
                     SUBSCRIBE

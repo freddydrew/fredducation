@@ -19,7 +19,7 @@ def subscribeView(request):
                     email=form.cleaned_data['email']
                 )
                 newSubscriber.save()
-        return render(request,'subscribe/success.html')
+            return render(request,'subscribe/success.html')
    
     return render(request,'subscribe/subscribe.html',context=context)
 
