@@ -12,9 +12,4 @@ class subscribeForm(forms.Form):
     email = forms.EmailField(required=True,
                              help_text="Example: derf@mail.com",
                              label="Your Email")
-    recaptcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(
-        attrs={
-            'data-theme': 'light',
-            'data-size': 'compact',
-        }
-    ))
+    

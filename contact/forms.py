@@ -17,12 +17,6 @@ class contactForm(forms.Form):
                               widget=forms.Textarea,required=True,
                               max_length=2000,
                               help_text="In X article you forgot the ñ in...")
-    recaptcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(
-        attrs={
-            'data-theme': 'light',
-            'data-size': 'compact',
-        }
-    ))
 
 '''
 This sends me the contact forms contents so I can respond

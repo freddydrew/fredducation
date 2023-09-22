@@ -15,7 +15,7 @@
             </h3>
             <hr>
             <p>
-                Get notified when there is a new post. New posts weekly. 
+                Get notified when there is a new post. 
             </p>    
 
             <form method="POST">
@@ -23,41 +23,37 @@
                 {%csrf_token%}
 
                 {%for field in form%}
-                    {% if field.name != 'recaptcha' %}
-                        <div>
-                            <label for="{{field.id_for_label}}">
-                                {{field.label}}:
-                            </label>
-                            {%if field.errors%}
+                    <div>
+                        <label for="{{field.id_for_label}}">
+                            {{field.label}}:
+                        </label>
+                        {%if field.errors%}
+                            <input id="{{field.id_for_label}}" name="{{field.name}}" 
+                            type="text" class="form-control is-invalid"
+                            placeholder="{{field.help_text}}">
+                            <div class="invalid-feedback">
+                                {{ field.errors }}
+                            </div>
+                        {%else%}
                                 <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                                type="text" class="form-control is-invalid"
+                                type="text" class="form-control"
                                 placeholder="{{field.help_text}}">
-                                <div class="invalid-feedback">
-                                    {{ field.errors }}
-                                </div>
-                            {%else%}
-                                    <input id="{{field.id_for_label}}" name="{{field.name}}" 
-                                    type="text" class="form-control"
-                                    placeholder="{{field.help_text}}">
-                            {%endif%}
-                        </div>
-                    {%endif%}
+                        {%endif%}
+                    </div>
                 {%endfor%}
 
-                {%if form.recaptcha.errors%}
+                {%if robotForm.recaptcha.errors%}
                     <div align="center" class="mt-4">
-                        {{form.recaptcha}}
-                        <small class="text-danger">
-                            <strong>
-                                Are you a robot!?
+                        <small>
+                            <strong class="text-danger">
+                                Are you a robot!?  
                             </strong>
+                            reCAPTCHA has decided you are. Wait and try agian.
                         </small>
                     </div>
-                    
+                    {{robotForm.recaptcha}}
                 {%else%}
-                    <div align="center" class="mt-4">
-                        {{form.recaptcha}}
-                    </div>
+                        {{robotForm.recaptcha}}
                 {%endif%}
 
                 <button type="submit" class="btn btn-outline-dark btn-lg">
