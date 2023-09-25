@@ -13,7 +13,6 @@ def contactView(request):
     }
 
     if request.method == "POST":
-
         # If the fields in the form are validated successfully
         if form.is_valid() and robotForm.is_valid():
             # Create new contact object in database
@@ -22,7 +21,7 @@ def contactView(request):
                 lastName=form.cleaned_data['lastName'],
                 email=form.cleaned_data['email'],
                 subject=form.cleaned_data['subject'],
-                message=form.cleaned_data['message']
+                message=form.cleaned_data['message']  
             )
             newContact.save()
 

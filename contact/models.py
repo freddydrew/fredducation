@@ -12,5 +12,5 @@ class contact(models.Model):
     # What I use to track submitted messages
     timeSent = models.DateTimeField(auto_now_add=True,editable=False)
     updated = models.DateTimeField(auto_now=True,editable=False)
-    responded = models.TextField(blank=True,null=True)
+    responses = models.TextField(blank=True,null=True)
     closed = models.BooleanField(default=False)

@@ -19,13 +19,13 @@ def homeView(request):
 
     if request.method == 'POST':
         if form.is_valid() and robotForm.is_valid():
-            if subscriber.objects.filter(email=form.cleaned_data['email']).exists():
+            if subscriber.objects.filter(email=form.cleaned_data['email'].lower()).exists():
                 pass
             else:
                 newSubscriber = subscriber(
-                    firstName=form.cleaned_data['firstName'],
-                    lastName=form.cleaned_data['lastName'],
-                    email=form.cleaned_data['email']
+                    firstName=form.cleaned_data['firstName'].lower(),
+                    lastName=form.cleaned_data['lastName'].lower(),
+                    email=form.cleaned_data['email'].lower() 
                 )
                 newSubscriber.save()
             return render(request,'subscribe/success.html')

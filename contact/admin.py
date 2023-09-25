@@ -5,6 +5,7 @@ from .models import contact
 class contactAdmin(admin.ModelAdmin):
     list_display = ['subject','timeSent','updated','closed']
     readonly_fields = ['firstName','lastName','email',
-                       'subject','message','timeSent','updated']
+                       'subject','message',
+                       'timeSent','updated']
 
 admin.site.register(contact,contactAdmin)
