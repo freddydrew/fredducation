@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!-- Load Static -->
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/stylesSuccessUnsub.css' %}">
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-10">
+            <h2>You have successfully unsubscribed.</h2>
+            <p>
+                You will no longer be notified when there is a new post.
+            </p>
+            <small id="redirect-box">
+                This page will automatically redirect to the homepage in a moment.
+            </small>
+        </div>
+    </div>
+</div>
+
+<script>
+    setTimeout(myURL,7000)
+
+    function myURL(){
+        document.location.href = '/'
+    }
+</script>
+
+{%endblock content%}

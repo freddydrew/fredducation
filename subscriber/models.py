@@ -7,3 +7,6 @@ class subscriber(models.Model):
     lastName = models.CharField(max_length=50,blank=True)
     email = models.EmailField(max_length=75,blank=False)
     subscribeTime = models.DateTimeField(auto_now_add=True)
+
+
+

@@ -5,7 +5,7 @@ class subscribeSiteMap(sitemaps.Sitemap):
     changefreq = "weekly"
 
     def items(self):
-        return ["/subscribe/"]
+        return ["/subscribe/","/unsubscribe/"]
 
     def location(self, item):
         return item

@@ -13,3 +13,7 @@ class subscribeForm(forms.Form):
                              help_text="Example: derf@mail.com",
                              label="Your Email")
     
+class unsubscribeForm(forms.Form):
+    email = forms.EmailField(required=True,
+                             help_text="Example: derf@mail.com",
+                             label="Your Email")

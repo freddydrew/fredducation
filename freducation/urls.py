@@ -35,7 +35,7 @@ urlpatterns = [
     path('about/', aboutView,name='about'),
     path('articles/',include('articles.urls')),
     path('contact/',include('contact.urls')),
-    path('subscribe/',include('subscriber.urls')),
+    path('',include('subscriber.urls')),
     path("sitemap.xml",sitemap,{"sitemaps": sitemaps},
     name="django.contrib.sitemaps.views.sitemap")
 ]
