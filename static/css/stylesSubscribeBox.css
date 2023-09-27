@@ -1,0 +1,23 @@
+.card{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+    background-color: mediumpurple;
+    border-radius: 25px;
+    border-color: mediumpurple;
+}
+
+.card-body{
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+.card input{
+    margin-top: 2.5vh;
+}
+
+.card button{
+    margin-top: 2.5vh;
+    width: 100%;
+    font-weight: bold;
+}

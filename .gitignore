@@ -1,7 +1,8 @@
 bin/
 lib/
 lib64/
-static/
+static/articles
+static/images
 staticfiles/
 .env
 aws/

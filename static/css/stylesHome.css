@@ -1,0 +1,58 @@
+
+.container{
+    margin-top: 5vh;
+    height: auto;
+    flex-grow: 3;
+}
+
+.container hr{
+    margin-top: 0;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.carousel-inner img{
+    border-radius: 20px;
+    width: 60%;
+    margin: 0% 10%;
+}
+
+.carousel-caption, .carousel-caption p { 
+    margin-top: 1%;
+    position: relative;
+    left: auto;
+    right: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* .card{
+    transition: all 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.025);
+}
+
+.card-body{
+    padding-top: 2%;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.card-body h5{
+    margin-bottom: 0;
+}
+
+.card-body p{
+    margin-bottom: 0%;
+}
+
+.card img{
+    max-height: 100%;
+    max-width: 100%;
+} */
