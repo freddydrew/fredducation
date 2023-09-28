@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'articles',
     'contact',
     'subscriber',
+    'letter',
     'storages',
     'taggit',
     'captcha',
