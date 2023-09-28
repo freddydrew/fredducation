@@ -8,5 +8,6 @@
 - CSS, Bootstrap 5
 - JavaScript
 - AWS RDS provided PostrgreSQL database
-- AWS S3 Bucket 
-
+- AWS S3  
+- AWS SES
+- Heroku Hosting 
