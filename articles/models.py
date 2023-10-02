@@ -1,8 +1,10 @@
 from django.db import models
+from django.db.models.base import Model
 from django.db.models.signals import post_save
 from django.db.models import Q
 from django.urls import reverse
 from django.utils import timezone
+from django.forms import ModelChoiceField
 from .utils import slugfiy
 import pycountry
 from taggit.managers import TaggableManager
@@ -31,6 +33,11 @@ class articleManager(models.Manager):
     # Custom search function
     def search(self, query=None):
         return self.get_queryset().search(query=query)
+    
+# Define Custom Choice Field for FK text drop down
+class articleChoiceField(ModelChoiceField):
+    def label_from_instance(self, obj):
+        return "{}".format(obj.title)
 
 # My article model
 class article(models.Model):

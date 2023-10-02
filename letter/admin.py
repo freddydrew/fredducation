@@ -1,4 +1,5 @@
 from django.contrib import admin
+from articles.models import article, articleChoiceField
 from .models import letter
 from .utils import sendEmail
 
@@ -17,8 +18,16 @@ class letterAdmin(admin.ModelAdmin):
             confirmationMsg = 'Message Sent'
             modelAdmin.message_user(request,confirmationMsg)
 
-    list_display = ['title','sent','dateSent','article']
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'article':
+            return articleChoiceField(queryset=article.objects.filter(publish=True))
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+    
+    list_display = ['title','sent','dateSent']
     readonly_fields = ['sent','dateSent']
     actions = [sendLetter]
+
+    
 
 admin.site.register(letter,letterAdmin)
