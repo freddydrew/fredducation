@@ -20,9 +20,8 @@ def subscribeView(request):
                 pass
             else:
                 newSubscriber = subscriber(
-                    firstName=form.cleaned_data['firstName'].lower(),
-                    lastName=form.cleaned_data['lastName'].lower(),
-                    email=form.cleaned_data['email'].lower()                )
+                    email=form.cleaned_data['email'].lower()                
+                    )
                 newSubscriber.save()
             return render(request,'subscribe/success.html')
     return render(request,'subscribe/subscribe.html',context=context)

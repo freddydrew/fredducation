@@ -23,8 +23,6 @@ def homeView(request):
                 pass
             else:
                 newSubscriber = subscriber(
-                    firstName=form.cleaned_data['firstName'].lower(),
-                    lastName=form.cleaned_data['lastName'].lower(),
                     email=form.cleaned_data['email'].lower() 
                 )
                 newSubscriber.save()

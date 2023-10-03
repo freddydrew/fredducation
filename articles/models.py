@@ -37,7 +37,7 @@ class articleManager(models.Manager):
 # Define Custom Choice Field for FK text drop down
 class articleChoiceField(ModelChoiceField):
     def label_from_instance(self, obj):
-        return "{}".format(obj.title)
+        return "{}".format(obj.slug)
 
 # My article model
 class article(models.Model):
