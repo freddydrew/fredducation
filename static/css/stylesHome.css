@@ -29,40 +29,8 @@
 }
 
 /* Pinned Section Styles */
-#pinned{
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vh;
-    background-color: mediumpurple;
-    border-radius: 1px;
-    border-color: mediumpurple;
-}
-
-/* .card{
-    transition: all 0.2s ease;
-}
-
-.card:hover{
+#pinned:hover{
     box-shadow: 5px 6px 6px 2px #e9ecef;
     transform: scale(1.025);
 }
 
-.card-body{
-    padding-top: 2%;
-    padding-bottom: 0;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.card-body h5{
-    margin-bottom: 0;
-}
-
-.card-body p{
-    margin-bottom: 0%;
-}
-
-.card img{
-    max-height: 100%;
-    max-width: 100%;
-} */

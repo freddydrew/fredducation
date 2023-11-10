@@ -109,15 +109,19 @@
                       </div>
                       <div class="col-7">
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title mb-0">
                                 {{obj.title}}
                             </h5>
                             {%if obj.postType == 'person' or obj.postType == 'place'%}
-                                <p>{{obj.city}}, {{obj.country}}</p>
+                                <p class="mb-1">
+                                    {{obj.city}}, {{obj.country}}
+                                </p>
                             {%else%}
-                                <p>{{obj.description}}</p>
+                                <p class="mb-1">
+                                    {{obj.description}}
+                                </p>
                             {%endif%}
-                            <p class="card-text text-truncate" style="max-width: 350px">
+                            <p class="card-text text-truncate mb-1" style="max-width: 350px">
                                 {{obj.content}}
                             </p>
                             <p class="card-text">
