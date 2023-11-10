@@ -28,6 +28,16 @@
     margin-bottom: 0;
 }
 
+/* Pinned Section Styles */
+#pinned{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+    background-color: mediumpurple;
+    border-radius: 1px;
+    border-color: mediumpurple;
+}
+
 /* .card{
     transition: all 0.2s ease;
 }

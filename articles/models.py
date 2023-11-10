@@ -122,7 +122,7 @@ class article(models.Model):
                 #pass otherwise, nothing needed to be done
                 except Exception as ex:
                     pass
-                kwargs["update_fields"] = updatedFields
+            kwargs["update_fields"] = updatedFields
         except:
             pass
         return super().save(*args, **kwargs)
