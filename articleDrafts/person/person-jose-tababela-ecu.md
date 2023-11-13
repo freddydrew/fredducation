@@ -1,0 +1,24 @@
+# Content
+
+My friend Diego and I made plans to go to a dirt park, but before going we had to go to the house of Diego's friend José. Diego told me he was going to help José build parts of a ramp. I thought "cool, an adventure". I had never been with BMX buddies that only spoke Spanish, in another country. I the morning I went to Terminal Río Coca, a bus station in Quito to meet with Diego and get on a bus toward Tababela. The bus had speakers decorated with fabric of different colors. The entire trip the bus was speeding and I thought it was going to tip over around turns, especially when we crossed the mountains. But I enjoyed it. When the bus arrived in Tababela, we got off and rode our bikes to José's house. 
+
+Diego's girlfriend sat in the handlebars while Diego pedaled. After a short ride we arrived at José's house. I still hadn't met José and wondered: "Jose you know I'm coming with Diego right?". We walked around back of the property and I saw it: a mini ramp in the yard. It was awesome, it was like seeing part of a skate park but in a back yard. A guy came out of a house near the mini ramp and introduced himself as José. We spoke a bit about the ramp and my trip before he and Diego got to work. After a few hours in which I spoke with Diego's girlfriend, walked around the property, took photos, and looked at the planes that flew overhead, Diego and José finished he goal for the day. The mini was ready to ride. We rode a bit and I took a ton of photos of the session. 
+
+After the session we went to a dirt track called [Rumibike](https://www.instagram.com/rumibike108/?hl=en). Until that moment, I had never rode a dirt track. Turned out that José worked there and could ride when he wanted. There were kids getting riding lessons, people riding mountain bikes. and us. I enjoyed doing laps on the rollers, just the little ones, I wasn't ready for the big boy jumps. Maybe one day. Diego, who is insane, was sending backflips. When it got dark, José took us to the bus station. He said goodbye and we got on the bus. José taught me the words despegue and receptor, the dirt jump and it's landing. He also told me that I have to visit Córdoba, Argentina. He is from there. Now Córdoba is a stop on my list. 
+
+Rumibike:
+
+* Colegio Pachamama, Calle Ilalo, diagonal al, Quito 170184, Ecuador
+
+# ContentEsp
+
+Mi amigo Diego y yo hicimos planes para ir a una pista de tierra, pero antes de llegar a la pista teníamos que ir a la casa de un amigo de Diego, José. Diego me dijo que él iba a ayudar a José construir partes de una rampa. Pensé “bueno, una Aventura”. Nunca he estado con amigos de BMX que sólo hablan español en otro país. En la mañana fui a la terminal Río Coca, una estación de buses en Quito, para reunirme con Diego y subir a un bus hacia Tababela. El bus tenía alta voces decorados con tela de colores diferentes. Todo el viaje el bus estaba moviéndose rápidamente y pensaba que iba a voltearse cuando hacía los giros, especialmente cuando cruzamos las montañas en la autopista. Pero yo lo disfrutaba. Cuando el bus llegó a Tababela, bajamos del bus y montamos en las bicis a la casa de José.
+
+La novia de Diego se sentó en los volantes de la bici de Diego mientras Diego pedaleaba. Después de un paseo corto, llegamos a la casa de José. Todavía yo no había conocido a José y me preguntaba: “¿José sabes que estoy llegando con Diego cierto?”. Caminamos por atrás de la propiedad y la vi: una rampa grande en el jardín. Fue muy impresionante, era como ver parte de una pista de BMX pero en el jardín de una casa. Un hombre salió de una casa cerca de la rampa y se presentó como José. Hablamos un poco sobre la rampa y mi viaje, antes que José y Diego empezarán trabajar. Después unas horas en las que hablaba con la novia de Diego, caminaba por la propiedad, tomaba fotos, y miraba los aviones que volaban sobre la casa, Diego y José terminaron la meta del día. La rampa estaba lista para montar con las bicis. Montamos un poco y tomé muchas fotos de la sesión que siguió.
+
+Después la sesión fuimos a una pista de tierra se llamaba [Rumibike](https://www.instagram.com/rumibike108/?hl=en). Hasta ese momento, jamás yo había montado en una pista de tierra. Resultó que José trabajaba en la pista y podía montar cuando quisiera. Había niños recibiendo lecciones de montar bicis, personas con bicis de montaña, y nosotros. Yo disfrutaba dando vueltas en la pista, pero sólo del parte de los pequeños, yo no estaba listo para las rampas grandes, tal vez en el futuro. Diego, quien es un loco, hacia volteretas. Cuando anocheció, José nos llevó a la estación de buses. Se despidió y subimos el bus. José me enseñó las palabras despegue y el receptor, los partes de una rampa. También él me dijo que yo tengo que visitar Córdoba, Argentina, es de allá. Ahora Córdoba es parte de la lista de paradas de mi viaje.
+
+Rumibike:
+
+* Colegio Pachamama, Calle Ilalo, diagonal al, Quito 170184, Ecuador
+

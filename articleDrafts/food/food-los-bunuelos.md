@@ -1,0 +1,23 @@
+# Content:
+
+When I arrived in Medellín, Colombia, I noticed a lot of the food that they eat there is fried or some form of bread. At first, it bothered me that I couldn’t find a bigger variety of protein, outside of plates like the bandeja paisa or meat skewers they sell in the streets. But one day I realized that I was in another country with its own food, and that I could complain or enjoy the differences between this country and my own. So I started to explore the bakeries of Medellín. There was a bakery between my apartment and the Spanish School that I was attending. The bakery was called Martipan. I had breakfast there with my wife often. We tried different bread almost every day and today I believe that you can’t beat pandebono. 
+
+One day I decided to stop going with my wife so that I could order alone and practice my Spanish. In those days I was more shy when speaking Spanish. Going alone to the bakery alone offered me an opportunity to improve my confidence. It turns out that it worked. I learned a lot about Colombian bread, practiced my Spanish, improved my confidence, and became more familiar with the people in Medellín. I regret never having taken a photo of the bakery or the woman that worked there because in those days this website wasn’t an idea that I had. But I will never forget what the baker taught me about bread, or the memories of learning Spanish at the front of the line outside of the bakery. 
+
+The last week in Medellín was when I started to take more photos of the day-to-day. Here are some of the buñuelos that we enjoyed the last visit to the bakery in Medellín. The bakery was called Mi Buñuelo La Consolata, and it was in the neighborhood of Laureles. There’s many bakeries like that in the city, that specialize in buñuelos. Yesterday after a baseball game here in New York, my wife and I walked in the Corona neighborhood of Queens and stopped at a Colombian bakery. It reminded me of my favorite bakery in Medellín and it’s for that reason that today I wrote this article. I miss buñuelos, pandebonos, almojábanas, and panderos, all with a cup of coffee in the morning, while people pass on the sidewalk.
+
+Martipan:
+
+* Cra. 73a #73A-9, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia, Colombia
+
+# ContentEsp:
+
+Cuando llegué en a Medellín Colombia noté que mucha de la comida que comen allá está frita o es una en forma de pan. Al principio me molestaba que no pudiese encontrar una gran variedad de proteína afuera platos como la bandeja paisa o chuzos de carne que se venden en las calles. Pero llegó un día en que me di cuenta que estaba en otro país con su propia comida y que podía quejarme o disfrutar las diferencias entre este país y el mío. Entonces empecé explorar las panaderías de Medellín. Había una panadería entre mi departamento y la escuela de español a la que yo asistía. La panadería se llamaba “Martipan”. Desayuné con mi esposa allá a menudo. Probamos pan diferente casi todos los días y hoy creo que no se puede superar el pandebono. 
+
+Un día decidí dejar de ir con mi esposa para que pudiera ordenar solo y practicar mi español. En aquel entonces yo era más tímido cuando hablaba en español. Ir solo a la panadería me ofrecía una oportunidad para mejorar mi confianza. Resulta qué funcionó. Aprendía mucho sobre el pan colombiano, practicaba mi español, mejoraba mi confianza, y llegaba a conocer la gente de Medellín mejor. Me arrepiento de nunca haber tomado una foto de la panadería o la señora que trabajaba allá porque en aquel entonces este sitio de web no era una idea que tenía yo. Pero nunca olvidaré lo que me enseñó la panadera sobre el pan ni las memorias de aprender español al frente de la cola afuera de la panadería. 
+
+La última semana en Medellín fue cuando empecé a tomar más fotos del día a día. Aquí son los buñuelos que disfrutamos en la última visita a una panadería en Medellín. La panadería se llamaba Mi Buñuelo La Consolata y estaba en el barrio de Laureles. Hay muchas panaderías así en la ciudad, que se especializan en los buñuelos. Ayer después de un partido de béisbol acá a Nueva York, mi esposa y yo caminamos en el barrio de Corona en Queens y nos paramos en una panadería colombiana. Me recordó a mí panadería favorita en Medellín y es por eso que hoy escribí este artículo. Extraño los buñuelos, pandebonos, almojábanas, y los panderos, todo con un tinto en la mañana mientras la gente pasa en la acera.
+
+Martipan:
+
+* Cra. 73a #73A-9, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia, Colombia

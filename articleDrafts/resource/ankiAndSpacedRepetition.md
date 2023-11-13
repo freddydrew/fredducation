@@ -1,3 +1,5 @@
+# Content
+
 When I first set out to learn Spanish, I really didn't know where to start. I gave it a google and got overwhelmed pretty quickly with all of the resources and services trying to get my money. When I popped into [r/languagelearning](https://www.reddit.com/r/languagelearning/), a place I rarely visit these days, I noticed plenty of posts mentioning this thing called Anki and spaced repetition but I hadn't heard of either at the time. They ended up having a pretty big impact on my language learning journey so I thought I'd share that in this post. 
 
 ### What is Spaced Repetition?
