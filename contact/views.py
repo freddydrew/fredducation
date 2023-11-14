@@ -2,6 +2,7 @@ from django.shortcuts import render
 from freducation.forms import recaptchaV3
 from .forms import contactForm
 from .models import contact
+from .utils import newContactSubmission
 
 # Create your views here.
 def contactView(request):
@@ -24,7 +25,13 @@ def contactView(request):
                 message=form.cleaned_data['message']  
             )
             newContact.save()
-
+            newContactSubmission(
+                form.cleaned_data['firstName'],
+                form.cleaned_data['lastName'],
+                form.cleaned_data['email'],
+                form.cleaned_data['subject'],
+                form.cleaned_data['message']  
+            )
             # Send user to success page 
             return render(request,'contact/success.html')
 
