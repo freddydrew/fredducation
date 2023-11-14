@@ -6,7 +6,8 @@ import datetime as dt
 class letter(models.Model):
     title = models.CharField(max_length=75,blank=False)
     message = models.TextField()
-    article = models.ForeignKey(article,on_delete=models.PROTECT)
+    article = models.ForeignKey(article,on_delete=models.PROTECT,
+                                blank=True)
     sent = models.BooleanField(default=False,editable=False)
     dateSent = models.DateField(null=True,editable=False)
 
