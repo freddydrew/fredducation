@@ -1,7 +1,7 @@
 from django.contrib import admin
 from articles.models import article, articleChoiceField
 from .models import letter
-from .utils import sendEmail
+from .utils import sendNewsLetter
 
 # Register your models here.
 class letterAdmin(admin.ModelAdmin):
@@ -12,7 +12,7 @@ class letterAdmin(admin.ModelAdmin):
             modelAdmin.message_user(request,warningMsg)
         else:
             obj = queryset[0]
-            sendEmail(obj)
+            sendNewsLetter(obj)
             obj.setSent()
             obj.setDateSent()
             confirmationMsg = 'Message Sent'

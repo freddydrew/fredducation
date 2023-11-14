@@ -1,0 +1,8 @@
+# Content 
+
+Some services likely have us on the hook for life-Spotify, the local electic company, ISPs, The New York Mets to name a few.  For me, another one has been thrown into the mix but I welcome it. [Readlang](https://readlang.com/landing-page) is a reading tool for language learners. You can upload content to Readlang or run the Readlang chrome extension and what that enables you to do is read in your target language with the aid of translations and dictionaries at your finger tips. How is this useful? I'll give you an example. You're reading something that you mostly understand and you come along a word or phrase that's new so you use the translation feature by highlighting this word or phrase. Right there above the highlighted section is the translation, you say to yourselg "okay it means that" and continue on. When you comes across it again, you may just remember it from last time and didn't have to disturb your reading process too much by stopping to lookup a word in a different app. Even better, everything you highlight gets saved to your very own deck of flashcards that you can review on Readlang's site if you so choose for a little extra review. After months of daily reading, I've established a pattern of translating the same thing, showing that I have difficulty with some concepts so it's given me things to focus on.   
+
+- Connect it to SRS article?
+- Why is reading so important?
+- Connect it to readlang video on features?
+- Has it helped me? 
