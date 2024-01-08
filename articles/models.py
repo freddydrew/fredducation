@@ -61,7 +61,7 @@ class article(models.Model):
                                          ("media","Media"),
                                          ("resource","Resource"),
                                          ("food","Food")])
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
     
     # Custom Manager Call 
     objects = articleManager()
