@@ -1,7 +1,6 @@
 # Not started
 
 - Emilio Quito, Ecuador
-- Matteo Quito, Ecuador
 - Stephen Quito, Ecuador
 - Luigi Lima, Peru
 - Christian Lima, Peru
@@ -28,7 +27,6 @@
 
 
 # Started 
-- Sign of El Salvador Border Guatemala
 
 # Written
 
@@ -38,3 +36,5 @@
 - Language Transfer
 - The door knob in Lima, Peru
 - Leo Quito, Ecuador
+- Matteo Quito, Ecuador
+- Sign of El Salvador Border Guatemala
