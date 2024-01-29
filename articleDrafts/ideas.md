@@ -1,35 +1,32 @@
 # Not started
-
-- Emilio Quito, Ecuador
+- Christian Lima, Peru
 - Stephen Quito, Ecuador
 - Luigi Lima, Peru
-- Christian Lima, Peru
-- Emilio Lima, Peru
 - Alejandro Medellin, Colombia
 - Signs of The Galapagos
 - Signs of Montreal, Canada
-- The Sikh boys in Buffalo
 - Rikomimi Bakery Rincon, Puerto Rico
 - The Aguilas Vs Licey Game in NYC
 - The Emergency Room in Quito, Ecuador
 - Sana Sana in Quito, Ecuador
 - Coffee shop with cup in Barranquilla, Colombia
 - Danny's wedding
-- Joel Fortin Toronto, Canada
 - Marvin saying Bien Long Island, USA
 - DIM vs America De Cali Medellin, Colombia 
 - Baseball Game Costa Rica
-- Austin saying Lo Siento in Barcelona, Spain
 - Huaca Pucllana Site, Lima, Peru
 - Catacumbas del Convento de San Francisco, Lima, Peru
-- Craig talking about Pavo Barcelona, Spain
 - Chocolate Lady in Guatemala
 
 
 # Started 
+- Don Emilio Lima, Peru
+- Austin saying Lo Siento in Barcelona, Spain
+- Craig talking about Pavo Barcelona, Spain
+- The Sikh boys in Buffalo
 
 # Written
-
+- Emilio Quito, Ecuador
 
 # Posted
 - Diego Quito, Ecuador
@@ -38,3 +35,4 @@
 - Leo Quito, Ecuador
 - Matteo Quito, Ecuador
 - Sign of El Salvador Border Guatemala
+- Joel Fortin Toronto, Canada
