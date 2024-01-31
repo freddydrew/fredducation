@@ -1,8 +1,0 @@
-# Content
-
-My wife and I were walking to get coffee when we saw this man waiting at a crosswalk. I told him I liked his scooter and it’s design. I said it’s the flag of my country and gave him a thumbs up. On the other side of the street, he approached us and asked where we are from. I said: from New York, and he said, with native level Spanish, that he was from California . We talked a bit about Ecuador, the tourism, and our travels. He asked how we like Quito to which we said that we love it. I took this photo before he left. I regret not asking his name so we’ll say it’s Captain America. Another friendly person in Ecuador. No surprise there. Writing this makes me the city more. Hopefully we return soon, there’s a lot to do.
-
-# ContentEsp
-
-Mi esposa y yo estábamos caminando para comprar café cuando vimos ese tipo esperando en un paso de peatones. Le dije que me gustó su Scooter y el diseño. Le Dije que es la bandera de mi país y le hice con un pulgar hacia arriba. En el otro lado de la calle se acercó a nosotros y nos preguntó de dónde somos. Respondí: de Nueva York y dijo con un nivel de español nativo que él era de California. Yo no le pregunté como sabe español, si yo tuviera que adivinar, diría que el creció hablándolo. Platicamos un poco sobre Ecuador, el turismo, y nuestros viajes. Él nos preguntó si nos gusta Quito a lo que respondimos que nos encanta Quito. Tomé esta foto antes de que él se fuera. Me arrepiento no preguntarle su nombre, entonces digamos que es Capitán América. Otra persona amistosa en Ecuador. No es una sorpresa. Escribiendo esto me hace extrañar más la ciudad. Ojalá regresemos pronto, hay tanto más por hacer.
-
