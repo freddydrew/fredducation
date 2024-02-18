@@ -96,6 +96,8 @@ async function loadMore(){
     div.innerHTML = out;
     document.getElementsByClassName('row')[0].appendChild(div);
     }  
+
+    currentArticleCount();
 }
 
 
