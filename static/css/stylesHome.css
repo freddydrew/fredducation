@@ -1,6 +1,6 @@
 
 .container{
-    margin-top: 5vh;
+    margin-top: 2vh;
     height: auto;
     flex-grow: 3;
 }
@@ -14,8 +14,8 @@
 }
 
 .carousel-inner img{
-    border-radius: 20px;
-    width: 60%;
+    border-radius: 5px;
+    width: 80%;
     margin: 0% 10%;
 }
 
