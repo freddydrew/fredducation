@@ -59,7 +59,7 @@
 
 <div class="container-lg one-image">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-10">
             <!-- Load image, must be URL, Not sure why -->
             <img src="{{obj.articleimage_set.all.0.image.url}}" 
             alt="{{obj.title}} image" class="">
@@ -72,7 +72,7 @@
 {%if obj.articleimage_set.count > 1%}
     <div class="container-lg">
         <div class="row justify-content-center align-items-center text-center">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-10">
                 <div id="carouselDark" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         {%for image in obj.articleimage_set.all%}
