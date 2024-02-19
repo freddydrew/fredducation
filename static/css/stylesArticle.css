@@ -17,7 +17,7 @@
     }
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 600px){
     .carousel-inner img{
         border-radius: 5px;
         object-fit: cover;
@@ -34,10 +34,6 @@
     width: 100%;
 }
 
-/* Article Title Formatting */
-.articleTitle {
-    text-align: center;
-}
 
 /* Article Content Formatting */
 a{

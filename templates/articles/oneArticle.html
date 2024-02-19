@@ -17,43 +17,6 @@
     </a>
 </div>
 
-<!-- Displaying content title and location -->
-<div class="container">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-8">
-            <!-- Display Title -->
-            <h1 class="articleTitle">{{obj.title}}</h1>
-
-            <!-- If person or place, display that info -->
-            {%if obj.postType == 'person' or obj.postType == 'place'%}
-                <h3 class="articleTitle">
-                    {{obj.city}}, {{obj.country}}
-                </h3>
-            {%else%}
-                <h3 class="articleTitle">
-                    {{obj.description}}
-                </h3>
-            {%endif%}
-            <p class="articleTitle">
-                <strong>
-                    By Freddy
-                </strong>
-            </p>
-            <p class="articleTitle text-muted">
-                <strong>
-                    {{obj.publishDate|date:"F j, Y"}}
-                </strong>
-            </p>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
 <!-- For when there is only one image, just display it -->
 {%if obj.articleimage_set.count == 1%}
 
@@ -107,8 +70,29 @@
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-8">
+
+            <!-- Displaying content title and location -->
+            <h1 class="mb-0">
+                {{obj.title}}
+            </h1>
+
+            <!-- If person or place, display that info -->
+            {%if obj.postType == 'person' or obj.postType == 'place'%}
+                <p>
+                    <strong>
+                        {{obj.city}}, {{obj.country}}
+                    </strong>
+                </p>
+            {%else%}
+                <p>
+                    <strong>
+                        {{obj.description}}
+                    </strong>
+                </p>
+            {%endif%}
+            <hr class="mt-0">
+
             <!-- Article Content, writeup -->
-            <hr>
             {%if obj.content != None%}
             <!-- Keeps spacing from object -->
                 <p>
