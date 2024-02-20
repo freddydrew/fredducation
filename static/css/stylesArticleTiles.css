@@ -22,11 +22,11 @@
 
 .card-subtitle{
     text-align: center;
-    height: 15%;
+    flex-grow: 3;
 }
 
 .card-footer {
-    flex: 1 1 auto;
+    flex: 1;
     text-align: center;
     margin-top: 5%;
     font-size: small;

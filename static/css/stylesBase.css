@@ -29,3 +29,7 @@ footer{
 .footer-links a {
     text-decoration: none;
 }
+
+*{
+font-family: "Jost", sans-serif;
+}
