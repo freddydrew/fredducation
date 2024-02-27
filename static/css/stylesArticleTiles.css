@@ -18,15 +18,16 @@
 .card-title{
     text-align: center;
     margin-top: 5%;
+    flex-grow: 3;
 }
 
 .card-subtitle{
     text-align: center;
-    flex-grow: 3;
+    flex-grow: 0;
 }
 
 .card-footer {
-    flex: 1;
+    flex-grow: 0;
     text-align: center;
     margin-top: 5%;
     font-size: small;
