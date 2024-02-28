@@ -11,30 +11,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
-                <h3> 
-                    About <span class="site-name">Fredd</span>ucation
-                </h3>
-                <hr>
-                <p>
-                    Initially I made Fredducation because I wanted to build web 
-                    development and programming skills. I thought a programming project 
-                    closely related to one of my interests, learning Spanish, wouldn't 
-                    feel like a chore and might even be fun. I really enjoyed building 
-                    it and still have fun working on it on my spare time but the site's 
-                    purpose in my life has changed. Now I use it to 
-                    reflect on how I learned more about something that is close to my heart 
-                    and to show gratitude for these moments in my life. When I first 
-                    brought the site to life I thought <em>"now I have to write articles all the time"</em>, 
-                    as if it was a bother to commit to something like this, but those 
-                    thoughts went away. I realized how good writing an article made me 
-                    feel. When I look at photos and piece together their story for a 
-                    post, I feel a deep appreciation for life. Today, that's why I'm writing articles on Fredducation. 
-                    I hope that other people read what I post 
-                    and feel good too. The posts focus on the people, places, media, and 
-                    resources that have taught me something, with an underlying theme of 
-                    travel. I try to post once a week but I'm not too strict about it, 
-                    mostly I post when it feels right. 
-                </p>
+                {% include 'partials/aboutFredducation.html' %}
             </div>
         </div>
     </div>
@@ -44,18 +21,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
-                <h3>About Me</h3>
-                <hr>
-                <p>
-                    I'm Freddy Drew, creator of Fredducation. I'm just a normal guy 
-                    that enjoys riding his bike, traveling, catching a baseball game, 
-                    and absolutely butchering his second language. Growing up I didn't 
-                    appreciate language learning or education in general but sometime 
-                    recently that changed. Now I'm learning, I'm loving it, and I'm grateful 
-                    for the opportunities to do so. That's 
-                    me in the photo below. On the day that photo was taken I learned 
-                    that staying hydrated on a hike is important. 
-                </p>
+                {% include 'partials/aboutMe.html' %}
             </div>
         </div>
     </div>
@@ -73,18 +39,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
-                <h3>
-                    Why is it called <span class="site-name">Fredd</span>ucation?
-                </h3>
-                <hr>
-                <p>
-                    I wanted to convey that the posts on this site are related to my learning experience,   
-                    i.e., <em>Freddy's education</em>. When I considered my website's name, that didn't 
-                    role off the tongue very well, so the play on the two words was born. Originally 
-                    it was going to be Freducation with only <strong>one d</strong>, but someone 
-                    already owned most of the top-level domains for that name. I've always been more 
-                    of a Freddy than a Fred anyways, so Fredducation it was.
-                </p>
+                {% include 'partials/whyFredducation.html' %}
             </div>
         </div>
     </div>
@@ -95,29 +50,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-8">
                 <div class="d-flex align-items-end justify-content-between">
-                    <h3>
-                        What's in a Logo?
-                    </h3>
-                    <img src="{% static 'images/NavbarLogo.png' %}" width="35" height="35" alt="logo"
-                    class="mb-1">
-                </div>
-                <hr>
-                <p>
-                    I didn't think of making a logo for the site until the project was well under way.
-                    I'm not quite sure how it came to me but I thought something along the lines of
-                    "langauge learning is a lot like explicit functions in algebra". So we take some function, 
-                    <strong><em>f</em></strong>, with input <strong><em>x</em></strong>, and outcome 
-                    <strong><em>y</em></strong>, represented all together as 
-                    <strong><em>f(x) = y</em></strong> and we're ready to do our homework. With respect to 
-                    langauge learning and myself, I (Freddy) am the function, the input (independent variable)
-                    is the language, and the outcome (dependent variable) is my ability to comprehend that langauge.
-                    So we arrive at the logo, <strong><em>f(ñ)</em></strong>, which is seen above this section and 
-                    on the top left corner of the site's navbar. The <strong>ñ</strong> seemed like a perfect fit to represent Spanish.
-                    Maybe in the future I'll target another language and plug in a character from that writing system.
-                    As for how to represent the output of that function in the logo? I have no idea. Let's say the output
-                    is the site and my poor grammar in real life. 
-
-                </p>
+                    {% include 'partials/whatsInALogo.html' %}
             </div>
         </div>
     </div>
