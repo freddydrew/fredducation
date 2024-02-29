@@ -1,7 +1,7 @@
 from django.contrib import admin
 from articles.models import article, articleChoiceField
 from .models import letter
-from .utils import sendNewsLetter
+from .utils import sendNewsLetter, sendTestNewsLetter
 
 # Register your models here.
 class letterAdmin(admin.ModelAdmin):
@@ -18,15 +18,22 @@ class letterAdmin(admin.ModelAdmin):
             confirmationMsg = 'Message Sent'
             modelAdmin.message_user(request,confirmationMsg)
 
-    def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'article':
-            return articleChoiceField(queryset=article.objects.filter(publish=True))
-        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+    @admin.action(description='Send test email')
+    def sendTestLetter(modelAdmin,request,queryset):
+        if queryset.count() != 1:
+            warningMsg = 'Only one test letter can be sent at a time.'
+            modelAdmin.message_user(request,warningMsg)
+        else:
+            obj = queryset[0]
+            sendTestNewsLetter(obj)
+            obj.setSent()
+            obj.setDateSent()
+            confirmationMsg = 'Message Sent'
+            modelAdmin.message_user(request,confirmationMsg)
 
-    
     list_display = ['title','sent','dateSent']
     readonly_fields = ['sent','dateSent']
-    actions = [sendLetter]
+    actions = [sendLetter, sendTestLetter]
 
     
 

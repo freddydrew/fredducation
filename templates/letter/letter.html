@@ -1,12 +1,106 @@
-{% load markdownTag %}
-<p>
-    {{object.message|markdown|safe}}
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>
-    If you would like to reach out, please use the site's 
-    <a href="https://www.fredducation.co/contact/">contact</a> 
-    form and <strong>do not</strong> send emails to this address. 
-    I do not monitor the inbox. You can unsubscribe anytime you like 
-    <a href="https://www.fredducation.co/unsubscribe/">here.</a>
-</p>
+        <!-- Load Static -->
+    {% load static %}
+
+    <!-- Load markdown tag -->
+    {% load markdownTag %}
+
+    <style>
+        .header-hr hr{
+            border: none;
+            color: mediumpurple;
+            background-color: mediumpurple;
+            height: 2px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-child{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .site-name{
+            color: mediumpurple;
+        }
+
+        .message{
+            margin-top: 20px;
+            margin-bottom: 25px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .footer{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            border-radius: 3px;
+            text-align: center;
+            width: 100%;
+            background-color: mediumpurple;
+            color: white;
+        }
+
+        .footer a{
+            color: white;
+        }
+
+        .footer a:hover{
+            color: lightgray
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header-hr">
+        <hr>
+    </div>
+    <div class="header">
+        <div class="header-child">
+            <h1 class="site-name">Fredd</h1>
+            <h1>ucation</h1>
+        </div>
+    </div>
+    <div class="header-hr">
+        <hr>
+    </div>
+
+    <p class="message">
+        {{object.message|markdown|safe}}
+    </p>
+    
+    <p>
+        If you would like to reach out, please use the site's 
+        <a href="https://www.fredducation.co/contact/">contact</a> 
+        form and <strong>do not</strong> send emails to this address. 
+        I do not monitor the inbox. 
+    </p>
+    
+    <div class="footer">
+        <img src="{% static 'images/NavbarLogo.png' %}" 
+        width="50" height="50" alt="navbar-logo">
+        <p>
+            You can unsubscribe anytime  
+            <a href="https://www.fredducation.co/unsubscribe/">here.</a>
+        </p>
+        <p>
+            Copyright DERFWERD © 2024, All Rights Reserved    
+        </p>
+    </div>
+
+</body>
+</html>
