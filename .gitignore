@@ -1,9 +1,13 @@
 bin/
 lib/
 lib64/
-static/articles
-static/images
+static/articles/
+static/images/
 staticfiles/
 .env
 aws/
-.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
