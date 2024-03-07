@@ -1,4 +1,6 @@
+# Virtual environment, images, env variables, aws
 bin/
+include/
 lib/
 lib64/
 static/articles/
