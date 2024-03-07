@@ -5,7 +5,6 @@ static/articles/
 static/images/
 staticfiles/
 .env
-.vscode/
 aws/
 
 # Byte-compiled / optimized / DLL files
