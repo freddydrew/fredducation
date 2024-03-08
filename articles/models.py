@@ -1,10 +1,8 @@
 from django.db import models
-from django.db.models.base import Model
 from django.db.models.signals import post_save
 from django.db.models import Q
 from django.urls import reverse
 from django.utils import timezone
-from django.forms import ModelChoiceField
 from .utils import slugfiy
 import pycountry
 from taggit.managers import TaggableManager
@@ -23,21 +21,6 @@ class articleQuerySet(models.QuerySet):
             slug__icontains=query) | Q(
             postType__icontains=query)
         return self.filter(lookups)
-
-# Modifying the base manager function for my class
-class articleManager(models.Manager):
-    # Custom QuerySet function call
-    def get_queryset(self):
-        return articleQuerySet(self.model,using=self._db)
-    
-    # Custom search function
-    def search(self, query=None):
-        return self.get_queryset().search(query=query)
-    
-# Define Custom Choice Field for FK text drop down
-class articleChoiceField(ModelChoiceField):
-    def label_from_instance(self, obj):
-        return "{}".format(obj.slug)
 
 # My article model
 class article(models.Model):
@@ -63,9 +46,6 @@ class article(models.Model):
                                          ("food","Food")])
     tags = TaggableManager(blank=True)
     
-    # Custom Manager Call 
-    objects = articleManager()
-
     ## Getters
     def getTitle(self):
         return self.title

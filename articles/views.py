@@ -52,7 +52,6 @@ def articleSearchView(request):
         rank=SearchRank(vector,query)).filter(publish=True,rank__gte=0.001).order_by('-rank')
     
     # Using old custom search queryset methods defined in model
-    # object_list = article.objects.search(query=query).filter(publish=True)
     context={
         'object_list': object_list, #default name
         'searchQuery': q

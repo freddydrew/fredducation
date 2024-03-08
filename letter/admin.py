@@ -1,5 +1,4 @@
 from django.contrib import admin
-from articles.models import article, articleChoiceField
 from .models import letter
 from .utils import sendNewsLetter, sendTestNewsLetter
 
@@ -34,7 +33,5 @@ class letterAdmin(admin.ModelAdmin):
     list_display = ['title','sent','dateSent']
     readonly_fields = ['sent','dateSent']
     actions = [sendLetter, sendTestLetter]
-
-    
 
 admin.site.register(letter,letterAdmin)
