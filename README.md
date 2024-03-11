@@ -1,5 +1,4 @@
 # Fredducation: A Language Learning Blog
-***
 
 ### What is Fredducation?
 [Fredducation](https://www.fredducation.co/) is where I share bits of my language learning experience. Every week I try to put out a post, but I'm not to strict with myself on that. It's whenever feels right. 
