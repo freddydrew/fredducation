@@ -1,26 +1,10 @@
 from django.db import models
 from django.db.models.signals import post_save
-from django.db.models import Q
 from django.urls import reverse
 from django.utils import timezone
 from .utils import slugfiy
 import pycountry
 from taggit.managers import TaggableManager
-
-# Define Custom QuerySet behavior
-class articleQuerySet(models.QuerySet):
-    def search(self, query=None):
-        if query is None or query == "" or query.strip() == '':
-                return self.none() # Empty query list
-        # Q lookups
-        lookups = Q(title__icontains=query) | Q(
-            content__icontains=query) | Q(
-            city__icontains=query) | Q(
-            country__icontains=query) | Q(
-            alpha3__icontains=query) | Q(
-            slug__icontains=query) | Q(
-            postType__icontains=query)
-        return self.filter(lookups)
 
 # My article model
 class article(models.Model):
