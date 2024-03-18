@@ -9,7 +9,7 @@ def homeView(request):
     form = subscribeForm(request.POST or None)
     robotForm = recaptchaV3(request.POST or None)
     sliderObjList = article.objects.all().filter(publish=True).order_by('-publishDate')[0:3]
-    pinnedObjList = article.objects.all().filter(pinned=True).order_by('-publishDate')
+    pinnedObjList = article.objects.all().filter(pinned=True,publish=True).order_by('-publishDate')
     context = {
         "sliderObjList": sliderObjList,
         "pinnedObjList": pinnedObjList,
