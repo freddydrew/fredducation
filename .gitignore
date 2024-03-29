@@ -8,6 +8,9 @@ static/images/
 staticfiles/
 .env
 aws/
+Include/
+Lib/
+Scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
