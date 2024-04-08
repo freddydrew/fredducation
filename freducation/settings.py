@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'letter',
     'storages',
     'taggit',
-    'captcha',
+    'django_recaptcha',
 ]
 
 MIDDLEWARE = [

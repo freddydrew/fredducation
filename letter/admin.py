@@ -25,8 +25,6 @@ class letterAdmin(admin.ModelAdmin):
         else:
             obj = queryset[0]
             sendTestNewsLetter(obj)
-            obj.setSent()
-            obj.setDateSent()
             confirmationMsg = 'Message Sent'
             modelAdmin.message_user(request,confirmationMsg)
 
